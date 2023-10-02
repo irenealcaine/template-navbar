@@ -1,2 +1,2 @@
-# template-sidebar
+# template-navbar
 Created with CodeSandbox
