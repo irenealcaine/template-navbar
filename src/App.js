@@ -1,10 +1,22 @@
-import "./styles.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.scss";
+import Main from "./Layout/Main/Main";
+import Home from "./Pages/Home/Home";
+import NotFound from "./Pages/NotFound/NotFound";
 
-export default function App() {
+function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <BrowserRouter>
+        <Main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Main>
+      </BrowserRouter>
     </div>
   );
 }
+
+export default App;

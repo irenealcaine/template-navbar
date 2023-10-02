@@ -1,0 +1,20 @@
+.main {
+  min-height: 100vh;
+  background-color: rgb(214, 214, 170);
+  position: relative;
+
+  padding: 70px 0;
+
+  .content {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    .content {
+      width: 90%;
+    }
+  }
+}
