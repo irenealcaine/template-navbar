@@ -7,10 +7,14 @@
   padding-right: 20px;
   padding-left: 20px;
 
-  position: absolute;
+  position: absolute; //   fixed if you wanna to see it always
   right: 0;
   left: 0;
   top: 0;
+
+  .logo {
+    height: 45px;
+  }
 
   .navigation {
     display: flex;
