@@ -1,6 +1,8 @@
+$light: #ececec;
+
 .main {
   min-height: 100vh;
-  background-color: rgb(214, 214, 170);
+  background-color: $light;
   position: relative;
 
   padding: 70px 0;
