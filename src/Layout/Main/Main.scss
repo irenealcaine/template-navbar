@@ -3,9 +3,15 @@
 .main {
   min-height: 100vh;
   background-color: $light;
+  color: $dark;
   position: relative;
 
   padding: 70px 0;
+
+  &.dark {
+    background-color: $dark;
+    color: $light;
+  }
 
   .content {
     width: 70%;

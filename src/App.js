@@ -9,8 +9,10 @@ import Page3 from "./Pages/Page3/Page3"
 import Page4 from "./Pages/Page4/Page4"
 
 function App() {
+
+
   return (
-    <div className="App">
+    <div className={`app`}>
       <BrowserRouter>
         <Main>
           <Routes>

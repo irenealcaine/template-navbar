@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import { navbarItems } from "../../Utils/Constants";
 import "./Footer.scss";
 import { Link } from "react-router-dom"
+import { DarkModeContext } from "../../Context/darkModeContext";
 
 const Footer = () => {
+
+  const { dispatch, darkMode } = useContext(DarkModeContext);
+
   return (
     <nav className="footer">
       <ul className="footer-list">
@@ -14,8 +19,29 @@ const Footer = () => {
             </Link>
           </li>
         ))}
-
       </ul>
+      <div className="color-options">
+
+        <div
+          className="color-option"
+          onClick={() => dispatch({ type: "LIGHT" })}
+        >
+          ⚪
+        </div>
+        <div
+          className="color-option"
+          onClick={() => dispatch({ type: "DARK" })}
+        >
+          ⚫
+        </div>
+        <div
+          className="color-option"
+          onClick={() => dispatch({ type: "TOGGLE" })}
+        >
+          {darkMode ? "☀️" : "🌙"}
+        </div>
+      </div>
+
     </nav>
   );
 };

@@ -5,21 +5,70 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: $header-height;
   padding-right: 20px;
   padding-left: 20px;
 
-  position: absolute; //   fixed if you wanna to see it always
+  //   fixed if you wanna to see it always, absolute if you wanna it to stay in top
+  position: fixed;
+  // position: absolute;
+
   right: 0;
   left: 0;
   top: 0;
 
   .logo {
-    height: 45px;
+    height: calc($header-height - 5px);
   }
 
   .navigation {
     display: flex;
     gap: 15px;
+
+    .navigation-item {
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &.active {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+
+    .navigation {
+      display: none;
+
+      &.active {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 80px;
+        position: absolute;
+        top: calc($header-height + 5px);
+        right: 5px;
+        text-align: center;
+        z-index: 10;
+        background: $blue;
+        border-radius: 15px;
+
+        // full width
+        // left: 5px;
+
+      }
+    }
+
+
+    .menu-toggle {
+      display: flex;
+    }
   }
 }

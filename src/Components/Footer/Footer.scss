@@ -5,11 +5,14 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 20px;
 
-  height: 30px;
-  padding-right: 20px;
+  padding: 5px 20px;
 
-  position: absolute;  //   fixed if you wanna to see it always
+  //   fixed if you wanna to see it always, absolute if you wanna it to stay in top
+  position: fixed;
+  // position: absolute;
+
   right: 0;
   left: 0;
   bottom: 0;
@@ -18,5 +21,16 @@
     display: flex;
     justify-content: flex-end;
     gap: 15px;
+
+  }
+
+  .color-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .color-option {
+      cursor: pointer;
+    }
   }
 }
