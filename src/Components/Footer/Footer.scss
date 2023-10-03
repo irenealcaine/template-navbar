@@ -1,5 +1,7 @@
+@import "src/Variables.scss";
+
 .footer {
-  background-color: rgba(41, 0, 223, 0.459);
+  background-color: $blue;
   display: flex;
   justify-content: flex-end;
   align-items: center;
