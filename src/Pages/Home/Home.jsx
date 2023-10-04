@@ -64,6 +64,8 @@ const Home = () => {
         officiis, deserunt vitae autem nisi placeat quos itaque fugiat. Quis,
         unde!
       </p>
+      <h2>Subtitle 3</h2>
+      <h3>Subsubtitle 2</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
         placeat a explicabo? Molestiae error, minus libero dolorem eveniet
