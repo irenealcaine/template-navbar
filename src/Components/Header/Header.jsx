@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <nav className={`header ${darkMode ? "dark" : ""}`}>
-      <Link to={"/"} onClick={() => setIsMenuOpen(false)}>
+      <Link to={"/"} onClick={() => setIsMenuOpen(false)} className="logo-link">
         <img src={logo} alt={"Logo"} className="logo" />
       </Link>
 

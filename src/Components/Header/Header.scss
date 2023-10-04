@@ -23,10 +23,13 @@
     border-bottom: 2px solid $blue;
     // color: $dark;
   }
-
-  .logo {
-    height: calc($header-height - 5px);
+  .logo-link{
+    display: flex;
+    .logo {
+      height: calc($header-height - 5px);
+    }
   }
+
 
   .navigation {
     display: flex;
@@ -70,7 +73,7 @@
 
         // full width
         // left: 5px;
-        
+
           &.dark{
             background-color: $dark-blue;
             border: 2px solid $blue;
