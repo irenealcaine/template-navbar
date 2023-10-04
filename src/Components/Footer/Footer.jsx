@@ -9,7 +9,7 @@ const Footer = () => {
   const { dispatch, darkMode } = useContext(DarkModeContext);
 
   return (
-    <nav className="footer">
+    <nav className={` footer ${darkMode ? "dark" : ""}`}>
       <ul className="footer-list">
 
         {navbarItems.map((navbarItem) => (

@@ -2,6 +2,7 @@
 
 .header {
   background-color: $blue;
+  border-bottom: 2px solid $dark-blue;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +17,12 @@
   right: 0;
   left: 0;
   top: 0;
+
+  &.dark{
+    background-color: $dark-blue;
+    border-bottom: 2px solid $blue;
+    // color: $dark;
+  }
 
   .logo {
     height: calc($header-height - 5px);
@@ -58,10 +65,17 @@
         text-align: center;
         z-index: 10;
         background: $blue;
+        border: 2px solid $dark-blue;
         border-radius: 15px;
 
         // full width
         // left: 5px;
+        
+          &.dark{
+            background-color: $dark-blue;
+            border: 2px solid $blue;
+            // color: $dark;
+          }
 
       }
     }
