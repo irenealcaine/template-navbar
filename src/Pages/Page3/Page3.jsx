@@ -1,7 +1,9 @@
+import "./Page3.scss"
+
 const Page3 = () => {
     return (
         <div className='page3'>
-            <span>Page 3</span>
+            <h1>Page 3</h1>
         </div>
     )
 }

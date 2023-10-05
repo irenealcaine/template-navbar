@@ -1,9 +1,11 @@
-const Page1 = () => {
-    return (
-        <div className='page1'>
-            <span>Page 1</span>
-        </div>
-    )
-}
+import "./Page1.scss";
 
-export default Page1
+const Page1 = () => {
+  return (
+    <div className="page1">
+      <h1>Page 1</h1>
+    </div>
+  );
+};
+
+export default Page1;

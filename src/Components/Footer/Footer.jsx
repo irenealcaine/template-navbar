@@ -1,19 +1,20 @@
 import { useContext } from "react";
 import { navbarItems } from "../../Utils/Constants";
 import "./Footer.scss";
-import { Link } from "react-router-dom"
+import { Link, useLocation  } from "react-router-dom"
 import { DarkModeContext } from "../../Context/darkModeContext";
 
 const Footer = () => {
 
   const { dispatch, darkMode } = useContext(DarkModeContext);
+    const location = useLocation();
 
   return (
     <nav className={` footer ${darkMode ? "dark" : ""}`}>
       <ul className="footer-list">
 
         {navbarItems.map((navbarItem) => (
-          <li key={navbarItem.slug} className="footer-item">
+          <li key={navbarItem.slug} className={`footer-item ${location.pathname === `/${navbarItem.slug}` && "active"}`}>
             <Link to={`/${navbarItem.slug}`}>
               {navbarItem.name}
             </Link>

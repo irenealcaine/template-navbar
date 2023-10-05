@@ -29,6 +29,16 @@
     justify-content: flex-end;
     gap: 15px;
 
+    .footer-item{
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &.active {
+        font-weight: 700;
+      }
+    }
+
   }
 
   .color-options {
