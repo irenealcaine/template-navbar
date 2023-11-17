@@ -32,6 +32,14 @@
     border-color: transparent $dark-main $dark-main;
   }
 
+  &.blue {
+    border-color: $blue $blue transparent;
+
+    &::after {
+      border-color: transparent $dark-blue $dark-blue;
+    }
+  }
+
   &.green {
     border-color: $green $green transparent;
 

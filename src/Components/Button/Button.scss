@@ -31,6 +31,30 @@
     }
   }
 
+   &.blue {
+    background-color: $blue;
+    border: 2px solid $dark-blue;
+    color: $dark-blue;
+
+    &:hover {
+      background-color: $dark-blue;
+      border: 2px solid $blue;
+      color: $blue;
+    }
+
+    &.dark {
+      background-color: $dark-blue;
+      border: 2px solid $blue;
+      color: $blue;
+
+      &:hover {
+        background-color: $blue;
+        border: 2px solid $dark-blue;
+        color: $dark-blue;
+      }
+    }
+  }
+
   &.green {
     background-color: $green;
     border: 2px solid $dark-green;
