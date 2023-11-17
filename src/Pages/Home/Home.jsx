@@ -1,9 +1,23 @@
+import BlogCard from "../../Components/BlogCard/BlogCard";
+import Button from "../../Components/Button/Button";
+import Loader from "../../Components/Loader/Loader";
+import ProductCard from "../../Components/ProductCard/ProductCard";
+import { posts } from "../../Data/BlogPosts";
+import { products } from "../../Data/Products";
 import "./Home.scss";
+
 
 const Home = () => {
   return (
     <div className="home">
       <h1>Home</h1>
+      <h2>Subtitle</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
+        placeat a explicabo?
+      </p>
+
+      <h3>Paragraph</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
         placeat a explicabo? Molestiae error, minus libero dolorem eveniet
@@ -11,80 +25,51 @@ const Home = () => {
         numquam ea, quo quibusdam. Voluptatibus velit tempora sed veritatis
         porro numquam repellat cum delectus. Aliquid doloremque aperiam rem
         accusamus ut, veniam velit, amet dolore, at libero voluptatem iure?
-        Obcaecati cum quo alias temporibus consequuntur. Culpa suscipit quod
-        saepe itaque magnam deserunt maiores. Ipsum quod aperiam, beatae, porro
-        doloremque voluptate, animi excepturi doloribus minima ea perferendis!
-        Minima odit enim officiis commodi iste nostrum ipsam placeat! Rerum
-        reprehenderit molestiae ut sint modi? Vel, esse suscipit. Ducimus
-        quaerat omnis ullam? Labore corrupti laudantium dicta assumenda itaque
-        vitae voluptas aliquid ratione ducimus accusamus unde quas provident,
-        commodi a? Architecto incidunt mollitia quam est, nisi sit, esse ipsam
-        alias eius consequuntur neque. Soluta eos quisquam cumque ad esse
-        officiis, deserunt vitae autem nisi placeat quos itaque fugiat. Quis,
-        unde!
       </p>
-      <h2>Subtitle 1</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
-        placeat a explicabo? Molestiae error, minus libero dolorem eveniet
-        mollitia accusantium voluptate voluptates ipsa pariatur itaque ratione
-        numquam ea, quo quibusdam. Voluptatibus velit tempora sed veritatis
-        porro numquam repellat cum delectus. Aliquid doloremque aperiam rem
-        accusamus ut, veniam velit, amet dolore, at libero voluptatem iure?
-        Obcaecati cum quo alias temporibus consequuntur. Culpa suscipit quod
-        saepe itaque magnam deserunt maiores. Ipsum quod aperiam, beatae, porro
-        doloremque voluptate, animi excepturi doloribus minima ea perferendis!
-        Minima odit enim officiis commodi iste nostrum ipsam placeat! Rerum
-        reprehenderit molestiae ut sint modi? Vel, esse suscipit. Ducimus
-        quaerat omnis ullam? Labore corrupti laudantium dicta assumenda itaque
-        vitae voluptas aliquid ratione ducimus accusamus unde quas provident,
-        commodi a? Architecto incidunt mollitia quam est, nisi sit, esse ipsam
-        alias eius consequuntur neque. Soluta eos quisquam cumque ad esse
-        officiis, deserunt vitae autem nisi placeat quos itaque fugiat. Quis,
-        unde!
-      </p>
-      <h2>Subtitle 2</h2>
-      <h3>Subsubtitle 1</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
-        placeat a explicabo? Molestiae error, minus libero dolorem eveniet
-        mollitia accusantium voluptate voluptates ipsa pariatur itaque ratione
-        numquam ea, quo quibusdam. Voluptatibus velit tempora sed veritatis
-        porro numquam repellat cum delectus. Aliquid doloremque aperiam rem
-        accusamus ut, veniam velit, amet dolore, at libero voluptatem iure?
-        Obcaecati cum quo alias temporibus consequuntur. Culpa suscipit quod
-        saepe itaque magnam deserunt maiores. Ipsum quod aperiam, beatae, porro
-        doloremque voluptate, animi excepturi doloribus minima ea perferendis!
-        Minima odit enim officiis commodi iste nostrum ipsam placeat! Rerum
-        reprehenderit molestiae ut sint modi? Vel, esse suscipit. Ducimus
-        quaerat omnis ullam? Labore corrupti laudantium dicta assumenda itaque
-        vitae voluptas aliquid ratione ducimus accusamus unde quas provident,
-        commodi a? Architecto incidunt mollitia quam est, nisi sit, esse ipsam
-        alias eius consequuntur neque. Soluta eos quisquam cumque ad esse
-        officiis, deserunt vitae autem nisi placeat quos itaque fugiat. Quis,
-        unde!
-      </p>
-      <h2>Subtitle 3</h2>
-      <h3>Subsubtitle 2</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
-        placeat a explicabo? Molestiae error, minus libero dolorem eveniet
-        mollitia accusantium voluptate voluptates ipsa pariatur itaque ratione
-        numquam ea, quo quibusdam. Voluptatibus velit tempora sed veritatis
-        porro numquam repellat cum delectus. Aliquid doloremque aperiam rem
-        accusamus ut, veniam velit, amet dolore, at libero voluptatem iure?
-        Obcaecati cum quo alias temporibus consequuntur. Culpa suscipit quod
-        saepe itaque magnam deserunt maiores. Ipsum quod aperiam, beatae, porro
-        doloremque voluptate, animi excepturi doloribus minima ea perferendis!
-        Minima odit enim officiis commodi iste nostrum ipsam placeat! Rerum
-        reprehenderit molestiae ut sint modi? Vel, esse suscipit. Ducimus
-        quaerat omnis ullam? Labore corrupti laudantium dicta assumenda itaque
-        vitae voluptas aliquid ratione ducimus accusamus unde quas provident,
-        commodi a? Architecto incidunt mollitia quam est, nisi sit, esse ipsam
-        alias eius consequuntur neque. Soluta eos quisquam cumque ad esse
-        officiis, deserunt vitae autem nisi placeat quos itaque fugiat. Quis,
-        unde!
-      </p>
+
+      <h2>Buttons</h2>
+      <Button value={"Default"} href={"https://google.es"} />
+      <Button value={"Green"} href={"https://google.es"} color={"green"} />
+      <Button value={"Red"} href={"https://google.es"} color={"red"} />
+      <Button value={"Purple"} href={"https://google.es"} color={"purple"} />
+      <Button
+        value={"Disabled"}
+        href={"https://google.es"}
+        color={"purple"}
+        disabled={true}
+      />
+
+      <h2>Loaders</h2>
+      <Loader />
+      <Loader color={"green"} />
+      <Loader color={"red"} />
+      <Loader color={"purple"} />
+
+      <h2>Blog Card</h2>
+
+      {posts.slice(0, 1).map((post) => (
+        <BlogCard
+          key={post.id}
+          image={post.image}
+          title={post.title}
+          subtitle={post.subtitle}
+          content={post.content}
+          author={post.author}
+          date={post.date}
+        />
+      ))}
+
+      <h2>Product Card</h2>
+
+      {products.slice(0, 1).map((product) => (
+        <ProductCard
+          key={product.id}
+          image={product.image}
+          title={product.title}
+          price={product.price}
+          description={product.description}
+        />
+      ))}
     </div>
   );
 };
