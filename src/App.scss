@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700;900&family=Poppins:wght@200;400;700;900&display=swap");
+@import "src/Variables.scss";
 
 * {
   font-family: "Poppins", sans-serif;
@@ -23,6 +24,18 @@ h4 {
   font-family: "Mulish", sans-serif;
   font-weight: 900;
   margin: 15px 0;
+  position: relative;
+  width: fit-content;
+
+  background: linear-gradient(to left, $main, $dark-main);
+  background-size: 100% 0.2em;
+  background-position: 0 70%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+
+  &:hover {
+    background-size: 100% 100%;
+  }
 }
 
 h1 {
