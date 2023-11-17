@@ -19,6 +19,14 @@
     padding: 0px 15px 10px 15px;
   }
 
+  &__title {
+    background: transparent;
+  }
+
+  &__subtitle {
+    background: transparent;
+  }
+
   &__content {
     display: -webkit-box;
     -webkit-line-clamp: 3;

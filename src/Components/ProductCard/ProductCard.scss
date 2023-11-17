@@ -15,12 +15,23 @@
     object-fit: cover;
   }
 
+  &__info {
+    padding: 0px 15px 10px 15px;
+  }
+
   &__name {
+    background: transparent;
   }
 
   &__price {
+    font-weight: 700;
+    font-size: 30px;
   }
 
   &__description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }

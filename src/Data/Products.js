@@ -2,12 +2,17 @@ export const products = [
   {
     id: 1,
     title: "Collar de gatos 2 piezas",
-    price: 12.59,
-    description: "Collares gemelos de gatos. Cadenas de 55 cm.",
+    price: {
+      main: 12.99,
+      offer: 10.99,
+      onSale: false,
+    },
+    description:
+      "Este collar de dos piezas de dos gatos es una monada total. Son dos gatitos adorables en un solo accesorio. Cada gato tiene un diseño detallado y se conectan en el medio. Uno es un minino travieso en tono plateado, y el otro, un gato dorado con una mirada curiosa. Hechos de metal resistente, estos gatitos son robustos y duraderos. El collar es ajustable, por lo que se adapta a cualquier tamaño de cuello. ¡Es la forma perfecta de mostrar tu amor por los gatos y compartirlo con un amigo peludo! ¡No puedes resistirte a estos mininos colgantes!",
     category: "Otros",
     image:
       "https://img.ltwebstatic.com/images3_pi/2022/07/05/1656986624a76cfab8b14d6221b2d7b269213a625f_thumbnail_900x.webp",
-    stock: false,
+    stock: 0,
     rating: {
       rate: 2.3,
       count: 124,
