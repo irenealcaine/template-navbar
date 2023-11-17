@@ -8,6 +8,8 @@
 
   padding: 70px 0;
 
+  transition: $transition;
+
   &.dark {
     background-color: $dark;
     color: $light;

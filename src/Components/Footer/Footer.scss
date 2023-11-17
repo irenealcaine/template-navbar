@@ -17,8 +17,9 @@
   right: 0;
   left: 0;
   bottom: 0;
+  transition: $transition;
 
-  &.dark{
+  &.dark {
     background-color: $dark-blue;
     border-top: 2px solid $blue;
     // color: $dark;
@@ -27,18 +28,44 @@
   .footer-list {
     display: flex;
     justify-content: flex-end;
-    gap: 15px;
+    gap: 25px;
 
-    .footer-item{
+    .footer-item {
       &:hover {
         text-decoration: underline;
       }
 
       &.active {
         font-weight: 700;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: "";
+          width: 3px;
+          height: 100%;
+          background-color: $dark-blue;
+          position: absolute;
+          top: 0;
+          transition: $transition;
+        }
+
+        &::before {
+          left: -7px;
+        }
+
+        &::after {
+          right: -7px;
+        }
+
+        &.dark {
+          &::before,
+          &::after {
+            background-color: $blue;
+          }
+        }
       }
     }
-
   }
 
   .color-options {
