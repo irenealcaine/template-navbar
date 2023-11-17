@@ -1,8 +1,8 @@
 @import "src/Variables.scss";
 
 .footer {
-  background-color: $blue;
-  border-top: 2px solid $dark-blue;
+  background-color: $main;
+  border-top: 2px solid $dark-main;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -20,8 +20,8 @@
   transition: $transition;
 
   &.dark {
-    background-color: $dark-blue;
-    border-top: 2px solid $blue;
+    background-color: $dark-main;
+    border-top: 2px solid $main;
     // color: $dark;
   }
 
@@ -44,7 +44,7 @@
           content: "";
           width: 3px;
           height: 100%;
-          background-color: $dark-blue;
+          background-color: $dark-main;
           position: absolute;
           top: 0;
           transition: $transition;
@@ -61,7 +61,7 @@
         &.dark {
           &::before,
           &::after {
-            background-color: $blue;
+            background-color: $main;
           }
         }
       }

@@ -2,8 +2,7 @@ $light: #fdfdfd;
 $dark: #101010;
 $light-gray: #d3d3d3;
 $dark-gray: #383838;
-$main: #22d3ee;
-$dark-main: #014d80;
+
 $blue: #22d3ee;
 $dark-blue: #014d80;
 $green: #22ee66;
@@ -12,6 +11,9 @@ $purple: #a24ef1;
 $dark-purple: #430180;
 $red: #fa4a4a;
 $dark-red: #800101;
+
+$main: $purple;
+$dark-main: $dark-purple;
 
 $header-height: 50px;
 

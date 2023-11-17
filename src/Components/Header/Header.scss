@@ -1,8 +1,8 @@
 @import "src/Variables.scss";
 
 .header {
-  background-color: $blue;
-  border-bottom: 2px solid $dark-blue;
+  background-color: $main;
+  border-bottom: 2px solid $dark-main;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,8 +22,8 @@
   transition: $transition;
 
   &.dark {
-    background-color: $dark-blue;
-    border-bottom: 2px solid $blue;
+    background-color: $dark-main;
+    border-bottom: 2px solid $main;
     // color: $dark;
   }
   .logo-link {
@@ -31,11 +31,11 @@
     .logo {
       height: calc($header-height - 10px);
       border-radius: 100rem;
-      border: 2px solid $dark-blue;
+      border: 2px solid $dark-main;
       transition: $transition;
 
       &.dark {
-        border: 2px solid $blue;
+        border: 2px solid $main;
       }
     }
   }
@@ -58,7 +58,7 @@
           content: "";
           width: 3px;
           height: 100%;
-          background-color: $dark-blue;
+          background-color: $dark-main;
           position: absolute;
           top: 0;
           transition: $transition;
@@ -75,7 +75,7 @@
         &.dark {
           &::before,
           &::after {
-            background-color: $blue;
+            background-color: $main;
           }
         }
       }
@@ -102,16 +102,16 @@
         right: 5px;
         text-align: center;
         z-index: 10;
-        background: $blue;
-        border: 2px solid $dark-blue;
+        background: $main;
+        border: 2px solid $dark-main;
         border-radius: 15px;
 
         // full width
         // left: 5px;
 
         &.dark {
-          background-color: $dark-blue;
-          border: 2px solid $blue;
+          background-color: $dark-main;
+          border: 2px solid $main;
           // color: $dark;
         }
       }
