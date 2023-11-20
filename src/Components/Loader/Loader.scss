@@ -11,9 +11,10 @@
   animation: rotation 1s linear infinite;
   margin: 5px;
 
-  border-color: $main $main transparent;
+  border-color: transparent $dark-main $main transparent;
 
-  &::after {
+  &::after,
+  &::before {
     content: "";
     box-sizing: border-box;
     position: absolute;
@@ -23,44 +24,64 @@
     bottom: 0;
     margin: auto;
     border: 3px solid;
-    width: 24px;
-    height: 24px;
     border-radius: 50%;
-    animation: rotationBack 0.4s linear infinite;
     transform-origin: center center;
+    border-color: transparent $dark-main $main transparent;
+  }
 
-    border-color: transparent $dark-main $dark-main;
+  &::after {
+    width: 40px;
+    height: 40px;
+    animation: rotation 2s linear infinite;
+  }
+
+  &::before {
+    width: 32px;
+    height: 32px;
+    animation: rotation 4s linear infinite;
   }
 
   &.blue {
-    border-color: $blue $blue transparent;
+    border-color: transparent $dark-blue $blue transparent;
 
     &::after {
-      border-color: transparent $dark-blue $dark-blue;
+      border-color: transparent $dark-blue $blue transparent;
+    }
+    &::before {
+      border-color: transparent $dark-blue $blue transparent;
     }
   }
 
   &.green {
-    border-color: $green $green transparent;
+    border-color: transparent $dark-green $green transparent;
 
     &::after {
-      border-color: transparent $dark-green $dark-green;
+      border-color: transparent $dark-green $green transparent;
+    }
+    &::before {
+      border-color: transparent $dark-green $green transparent;
     }
   }
 
   &.red {
-    border-color: $red $red transparent;
+    border-color: transparent $dark-red $red transparent;
 
     &::after {
-      border-color: transparent $dark-red $dark-red;
+      border-color: transparent $dark-red $red transparent;
+    }
+    &::before {
+      border-color: transparent $dark-red $red transparent;
     }
   }
 
   &.purple {
-    border-color: $purple $purple transparent;
+    border-color: transparent $dark-purple $purple transparent;
 
     &::after {
-      border-color: transparent $dark-purple $dark-purple;
+      border-color: transparent $dark-purple $purple transparent;
+    }
+    &::before {
+      border-color: transparent $dark-purple $purple transparent;
     }
   }
 }
@@ -72,15 +93,5 @@
 
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes rotationBack {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(-360deg);
   }
 }
