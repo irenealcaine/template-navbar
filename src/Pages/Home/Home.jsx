@@ -68,6 +68,8 @@ const Home = () => {
           image={product.image}
           title={product.title}
           price={product.price.main}
+          offer={product.price.offer}
+          onSale={product.price.onSale}
           description={product.description}
         />
       ))}
