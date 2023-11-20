@@ -17,6 +17,7 @@
     background-color: $dark-main;
     border: 2px solid $main;
     color: $main;
+    text-decoration: underline;
   }
 
   &.dark {
@@ -31,7 +32,27 @@
     }
   }
 
-   &.blue {
+  &.secondary {
+    background-color: transparent;
+    border: 2px solid $dark-main;
+    color: $dark-main;
+
+    &:hover {
+      border: 2px solid $main;
+    }
+
+    &.dark {
+      border: 2px solid $main;
+      color: $main;
+
+      &:hover {
+        background-color: transparent;
+        border: 2px solid $dark-main;
+      }
+    }
+  }
+
+  &.blue {
     background-color: $blue;
     border: 2px solid $dark-blue;
     color: $dark-blue;
@@ -132,6 +153,7 @@
     border: 2px solid rgba(128, 128, 128, 0.5);
     color: rgba(128, 128, 128, 0.8);
     cursor: auto;
+    text-decoration: none;
 
     &:hover {
       background-color: rgba(128, 128, 128, 0.5);

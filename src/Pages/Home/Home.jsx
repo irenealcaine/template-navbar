@@ -28,6 +28,12 @@ const Home = () => {
 
       <h2>Buttons</h2>
       <Button value={"Default"} href={"https://google.es"} />
+      <Button
+        value={"Secondary"}
+        href={"https://google.es"}
+        color={"secondary"}
+      />
+      <br />
       <Button value={"Blue"} href={"https://google.es"} color={"blue"} />
       <Button value={"Green"} href={"https://google.es"} color={"green"} />
       <Button value={"Red"} href={"https://google.es"} color={"red"} />
