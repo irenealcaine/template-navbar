@@ -38,6 +38,7 @@ const Home = () => {
       <Button value={"Green"} href={"https://google.es"} color={"green"} />
       <Button value={"Red"} href={"https://google.es"} color={"red"} />
       <Button value={"Purple"} href={"https://google.es"} color={"purple"} />
+      <br />
       <Button
         value={"Disabled"}
         href={"https://google.es"}

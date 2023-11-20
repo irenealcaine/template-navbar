@@ -9,31 +9,35 @@
   font-size: 18px;
   margin: 5px;
 
-  background-color: $main;
+  background: linear-gradient(145deg, $main, $dark-main);
+  background-size: 100% 300%;
+  background-position: 0% 0%;
   border: 2px solid $dark-main;
   color: $dark-main;
 
+  transition: $transition;
+
   &:hover {
-    background-color: $dark-main;
     border: 2px solid $main;
     color: $main;
     text-decoration: underline;
+    background-position: 0% 100%;
   }
 
   &.dark {
-    background-color: $dark-main;
     border: 2px solid $main;
     color: $main;
+    background-position: 0% 100%;
 
     &:hover {
-      background-color: $main;
+      background-position: 0% 0%;
       border: 2px solid $dark-main;
       color: $dark-main;
     }
   }
 
   &.secondary {
-    background-color: transparent;
+    background: transparent;
     border: 2px solid $dark-main;
     color: $dark-main;
 
@@ -53,23 +57,25 @@
   }
 
   &.blue {
-    background-color: $blue;
+    background: linear-gradient(145deg, $blue, $dark-blue);
+    background-size: 100% 300%;
+    background-position: 0% 0%;
     border: 2px solid $dark-blue;
     color: $dark-blue;
 
     &:hover {
-      background-color: $dark-blue;
+      background-position: 0% 100%;
       border: 2px solid $blue;
       color: $blue;
     }
 
     &.dark {
-      background-color: $dark-blue;
+      background-position: 0% 100%;
       border: 2px solid $blue;
       color: $blue;
 
       &:hover {
-        background-color: $blue;
+        background-position: 0% 0%;
         border: 2px solid $dark-blue;
         color: $dark-blue;
       }
@@ -77,23 +83,25 @@
   }
 
   &.green {
-    background-color: $green;
+    background: linear-gradient(145deg, $green, $dark-green);
+    background-size: 100% 300%;
+    background-position: 0% 0%;
     border: 2px solid $dark-green;
     color: $dark-green;
 
     &:hover {
-      background-color: $dark-green;
+      background-position: 0% 100%;
       border: 2px solid $green;
       color: $green;
     }
 
     &.dark {
-      background-color: $dark-green;
+      background-position: 0% 100%;
       border: 2px solid $green;
       color: $green;
 
       &:hover {
-        background-color: $green;
+        background-position: 0% 0%;
         border: 2px solid $dark-green;
         color: $dark-green;
       }
@@ -101,23 +109,25 @@
   }
 
   &.purple {
-    background-color: $purple;
+    background: linear-gradient(145deg, $purple, $dark-purple);
+    background-size: 100% 300%;
+    background-position: 0% 0%;
     border: 2px solid $dark-purple;
     color: $dark-purple;
 
     &:hover {
-      background-color: $dark-purple;
+      background-position: 0% 100%;
       border: 2px solid $purple;
       color: $purple;
     }
 
     &.dark {
-      background-color: $dark-purple;
+      background-position: 0% 100%;
       border: 2px solid $purple;
       color: $purple;
 
       &:hover {
-        background-color: $purple;
+        background-position: 0% 0%;
         border: 2px solid $dark-purple;
         color: $dark-purple;
       }
@@ -125,23 +135,25 @@
   }
 
   &.red {
-    background-color: $red;
+    background: linear-gradient(145deg, $red, $dark-red);
+    background-size: 100% 300%;
+    background-position: 0% 0%;
     border: 2px solid $dark-red;
     color: $dark-red;
 
     &:hover {
-      background-color: $dark-red;
+      background-position: 0% 100%;
       border: 2px solid $red;
       color: $red;
     }
 
     &.dark {
-      background-color: $dark-red;
+      background-position: 0% 100%;
       border: 2px solid $red;
       color: $red;
 
       &:hover {
-        background-color: $red;
+        background-position: 0% 0%;
         border: 2px solid $dark-red;
         color: $dark-red;
       }
@@ -149,14 +161,13 @@
   }
 
   &.disabled {
-    background-color: rgba(128, 128, 128, 0.5);
+    background: rgba(128, 128, 128, 0.5);
     border: 2px solid rgba(128, 128, 128, 0.5);
     color: rgba(128, 128, 128, 0.8);
     cursor: auto;
     text-decoration: none;
 
     &:hover {
-      background-color: rgba(128, 128, 128, 0.5);
       border: 2px solid rgba(128, 128, 128, 0.5);
       color: rgba(128, 128, 128, 0.8);
     }
