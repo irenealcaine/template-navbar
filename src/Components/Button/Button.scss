@@ -1,14 +1,18 @@
 @import "src/Variables.scss";
 
 .button {
-  padding: 5px 25px;
+  padding: 10px 25px;
   border-radius: 5px;
   transition: $transition;
   cursor: pointer;
   font-weight: 700;
   font-size: 18px;
   margin: 5px;
-  min-width: 100px;
+  min-width: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background: linear-gradient(145deg, $main, $dark-main);
   background-size: 100% 300%;

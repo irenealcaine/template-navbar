@@ -1,5 +1,8 @@
 import React from "react";
 import "./ProductCard.scss";
+import Button from "../Button/Button";
+import { FaCartShopping } from "react-icons/fa6";
+import { FaHeart } from "react-icons/fa";
 
 const ProductCard = ({ title, price, offer, onSale, image, description }) => {
   return (
@@ -18,6 +21,19 @@ const ProductCard = ({ title, price, offer, onSale, image, description }) => {
         <p className="product-card__description">{description}</p>
       </div>
       {onSale && <div className="product-card__onSale">¡En oferta!</div>}
+      <div className="buttons-container">
+        <Button
+          value={<FaCartShopping />}
+          href={"https://google.es"}
+          className={"product-button"}
+        />
+        <Button
+          value={<FaHeart />}
+          href={"https://google.es"}
+          color={"secondary"}
+          className={"product-button"}
+        />
+      </div>
     </div>
   );
 };
