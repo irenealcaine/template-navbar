@@ -173,3 +173,10 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .button {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+}
