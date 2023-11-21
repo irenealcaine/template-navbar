@@ -1,4 +1,5 @@
 import "./BlogCard.scss";
+import Button from "../Button/Button";
 
 const BlogCard = ({ title, image, subtitle, content, author, date }) => {
   return (
@@ -9,7 +10,7 @@ const BlogCard = ({ title, image, subtitle, content, author, date }) => {
         {/*it may change from h3 to h2, h4 or whatever */}
         <h4 className="blog-card__subtitle">{subtitle}</h4>
         <p className="blog-card__content">{content}</p>
-        {/* <p>See more</p> */}
+        <Button value={"Ver más"} className={"product-button"} />
         <p className="blog-card__author">
           {author}, {date}
         </p>
