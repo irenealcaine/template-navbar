@@ -26,8 +26,10 @@
     border-bottom: 2px solid $main;
     // color: $dark;
   }
+
   .logo-link {
     display: flex;
+
     .logo {
       height: calc($header-height - 10px);
       border-radius: 100rem;
@@ -45,8 +47,20 @@
     gap: 25px;
 
     .navigation-item {
+
+      &::before,
+      &::after {
+        content: "";
+        height: 0;
+        background-color: $dark-main;
+        position: absolute;
+        transition: $transition;
+        top: 50%
+      }
+
       &:hover {
         text-decoration: underline;
+
       }
 
       &.active {
@@ -55,13 +69,9 @@
 
         &::before,
         &::after {
-          content: "";
           width: 3px;
           height: 100%;
-          background-color: $dark-main;
-          position: absolute;
-          top: 0;
-          transition: $transition;
+          top: 0
         }
 
         &::before {
@@ -73,6 +83,7 @@
         }
 
         &.dark {
+
           &::before,
           &::after {
             background-color: $main;
