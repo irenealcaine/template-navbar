@@ -1,4 +1,4 @@
-import "./Button.scss";
+import "./Button.css";
 import { DarkModeContext } from "../../Context/darkModeContext";
 import { useContext } from "react";
 

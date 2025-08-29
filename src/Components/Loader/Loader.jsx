@@ -1,4 +1,4 @@
-import "./Loader.scss";
+import "./Loader.css";
 
 const Loader = ({ color }) => {
   return <span className={`loader ${color}`}></span>;

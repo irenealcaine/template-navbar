@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { navbarItems } from "../../Utils/Constants";
-import "./Footer.scss";
+import "./Footer.css";
 import { Link, useLocation } from "react-router-dom";
 import { DarkModeContext } from "../../Context/darkModeContext";
 

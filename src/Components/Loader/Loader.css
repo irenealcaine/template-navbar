@@ -1,4 +1,4 @@
-@import "src/Variables.scss";
+@import "../../Variables.css";
 
 .loader {
   width: 48px;
@@ -11,7 +11,7 @@
   animation: rotation 1s linear infinite;
   margin: 5px;
 
-  border-color: transparent $dark-main $main transparent;
+  border-color: transparent var(--dark-main) var(--main) transparent;
 
   &::after,
   &::before {
@@ -26,7 +26,7 @@
     border: 3px solid;
     border-radius: 50%;
     transform-origin: center center;
-    border-color: transparent $dark-main $main transparent;
+    border-color: transparent var(--dark-main) var(--main) transparent;
   }
 
   &::after {
@@ -42,46 +42,46 @@
   }
 
   &.blue {
-    border-color: transparent $dark-blue $blue transparent;
+    border-color: transparent var(--dark-blue) var(--blue) transparent;
 
     &::after {
-      border-color: transparent $dark-blue $blue transparent;
+      border-color: transparent var(--dark-blue) var(--blue) transparent;
     }
     &::before {
-      border-color: transparent $dark-blue $blue transparent;
+      border-color: transparent var(--dark-blue) var(--blue) transparent;
     }
   }
 
   &.green {
-    border-color: transparent $dark-green $green transparent;
+    border-color: transparent var(--dark-green) var(--green) transparent;
 
     &::after {
-      border-color: transparent $dark-green $green transparent;
+      border-color: transparent var(--dark-green) var(--green) transparent;
     }
     &::before {
-      border-color: transparent $dark-green $green transparent;
+      border-color: transparent var(--dark-green) var(--green) transparent;
     }
   }
 
   &.red {
-    border-color: transparent $dark-red $red transparent;
+    border-color: transparent var(--dark-red) var(--red) transparent;
 
     &::after {
-      border-color: transparent $dark-red $red transparent;
+      border-color: transparent var(--dark-red) var(--red) transparent;
     }
     &::before {
-      border-color: transparent $dark-red $red transparent;
+      border-color: transparent var(--dark-red) var(--red) transparent;
     }
   }
 
   &.purple {
-    border-color: transparent $dark-purple $purple transparent;
+    border-color: transparent var(--dark-purple) var(--purple) transparent;
 
     &::after {
-      border-color: transparent $dark-purple $purple transparent;
+      border-color: transparent var(--dark-purple) var(--purple) transparent;
     }
     &::before {
-      border-color: transparent $dark-purple $purple transparent;
+      border-color: transparent var(--dark-purple) var(--purple) transparent;
     }
   }
 }

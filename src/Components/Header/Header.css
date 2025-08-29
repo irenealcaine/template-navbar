@@ -1,43 +1,43 @@
-@import "src/Variables.scss";
+@import url("../../Variables.css");
 
 .header {
-  background-color: $main;
-  border-bottom: 2px solid $dark-main;
+  background-color: var(--main);
+  border-bottom: 2px solid var(--dark-main);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: $header-height;
+  height: var(--header-height);
   padding-right: 20px;
   padding-left: 20px;
 
-  //   fixed if you wanna to see it always, absolute if you wanna it to stay in top
+     /* fixed if you wanna to see it always, absolute if you wanna it to stay in top */
   position: fixed;
-  // position: absolute;
+   /* position: absolute; */
 
   right: 0;
   left: 0;
   top: 0;
 
   z-index: 10;
-  transition: $transition;
+  transition: var(--transition);
 
   &.dark {
-    background-color: $dark-main;
-    border-bottom: 2px solid $main;
-    // color: $dark;
+    background-color: var(--dark-main);
+    border-bottom: 2px solid var(--main);
+    /* color: --dark; */
   }
 
   .logo-link {
     display: flex;
 
     .logo {
-      height: calc($header-height - 10px);
+      height: calc(var(--header-height) - 10px);
       border-radius: 100rem;
-      border: 2px solid $dark-main;
-      transition: $transition;
+      border: 2px solid var(--dark-main);
+      transition: var(--transition);
 
       &.dark {
-        border: 2px solid $main;
+        border: 2px solid var(--main);
       }
     }
   }
@@ -52,9 +52,9 @@
       &::after {
         content: "";
         height: 0;
-        background-color: $dark-main;
+        background-color: var(--dark-main);
         position: absolute;
-        transition: $transition;
+        transition: var(--transition);
         top: 50%
       }
 
@@ -86,7 +86,7 @@
 
           &::before,
           &::after {
-            background-color: $main;
+            background-color: var(--main);
           }
         }
       }
@@ -109,21 +109,21 @@
         flex-direction: column;
         padding: 20px 80px;
         position: absolute;
-        top: calc($header-height + 5px);
+        top: calc(var(--header-height) + 5px);
         right: 5px;
         text-align: center;
         z-index: 10;
-        background: $main;
-        border: 2px solid $dark-main;
+        background: var(--main);
+        border: 2px solid var(--dark-main);
         border-radius: 15px;
 
-        // full width
-        // left: 5px;
+        /* full width */
+        /* left: 5px; */
 
         &.dark {
-          background-color: $dark-main;
-          border: 2px solid $main;
-          // color: $dark;
+          background-color: var(--dark-main);
+          border: 2px solid var(--main);
+          /* color: --dark; */
         }
       }
     }

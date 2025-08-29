@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import "./Header.scss";
+import "./Header.css";
 import logo from "../../Assets/Images/logo.jpg";
 import { Link, useLocation } from "react-router-dom";
 import { navbarItems } from "../../Utils/Constants";

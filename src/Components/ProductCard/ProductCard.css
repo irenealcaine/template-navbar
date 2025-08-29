@@ -1,52 +1,52 @@
-@import "src/Variables.scss";
+@import "../../Variables.css";
 
 .product-card {
-  background: linear-gradient(145deg, transparent 40%, $main 120%);
-  border: 2px solid $main;
-  box-shadow: 2px 2px 5px $dark-main;
+  background: linear-gradient(145deg, transparent 40%, var(--main) 120%);
+  border: 2px solid var(--main);
+  box-shadow: 2px 2px 5px var(--dark-main);
   border-radius: 5px;
   margin: 5px;
   max-width: 300px;
-  // overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 
-  &__image {
+  & .product-card__image {
     width: 100%;
     aspect-ratio: 4/3;
     object-fit: cover;
   }
 
-  &__info {
+  & .product-card__info {
     padding: 0px 15px 10px 15px;
   }
 
-  &__name {
+  & .product-card__name {
     background: transparent;
     text-wrap: balance;
   }
 
-  &__price {
+  & .product-card__price {
     font-weight: 700;
     font-size: 30px;
 
-    &__main {
+    & .product-card__main {
       text-decoration: line-through;
     }
   }
 
-  &__description {
+  & .product-card__description {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
 
-  &__onSale {
+  & .product-card__onSale {
     position: absolute;
     top: -10px;
     right: -10px;
     font-weight: 700;
-    background-color: $main;
+    background-color: var(--main);
     padding: 5px 20px;
     border-radius: 5px;
   }

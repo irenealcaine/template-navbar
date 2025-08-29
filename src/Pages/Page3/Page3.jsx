@@ -1,4 +1,4 @@
-import "./Page3.scss"
+import "./Page3.css"
 
 const Page3 = () => {
     return (

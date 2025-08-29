@@ -1,9 +1,9 @@
-@import "src/Variables.scss";
+@import "../../Variables.css";
 
 .button {
   padding: 5px 25px;
   border-radius: 5px;
-  transition: $transition;
+  transition: var(--transition);
   cursor: pointer;
   font-weight: 700;
   font-size: 18px;
@@ -14,153 +14,153 @@
   align-items: center;
   justify-content: center;
 
-  background: linear-gradient(145deg, $main, $dark-main);
+  background: linear-gradient(145deg, var(--main), var(--dark-main));
   background-size: 100% 300%;
   background-position: 0% 0%;
-  border: 2px solid $dark-main;
-  color: $dark-main;
+  border: 2px solid var(--dark-main);
+  color: var(--dark-main);
 
-  transition: $transition;
+  transition: var(--transition);
 
   &:hover {
-    border: 2px solid $main;
-    color: $main;
+    border: 2px solid var(--main);
+    color: var(--main);
     text-decoration: underline;
     background-position: 0% 100%;
   }
 
   &.dark {
-    border: 2px solid $main;
-    color: $main;
+    border: 2px solid var(--main);
+    color: var(--main);
     background-position: 0% 100%;
 
     &:hover {
       background-position: 0% 0%;
-      border: 2px solid $dark-main;
-      color: $dark-main;
+      border: 2px solid var(--dark-main);
+      color: var(--dark-main);
     }
   }
 
   &.secondary {
     background: transparent;
-    border: 2px solid $dark-main;
-    color: $dark-main;
+    border: 2px solid var(--dark-main);
+    color: var(--dark-main);
 
     &:hover {
-      border: 2px solid $main;
+      border: 2px solid var(--main);
     }
 
     &.dark {
-      border: 2px solid $main;
-      color: $main;
+      border: 2px solid var(--main);
+      color: var(--main);
 
       &:hover {
         background-color: transparent;
-        border: 2px solid $dark-main;
+        border: 2px solid var(--dark-main);
       }
     }
   }
 
   &.blue {
-    background: linear-gradient(145deg, $blue, $dark-blue);
+    background: linear-gradient(145deg, var(--blue), var(--dark-blue));
     background-size: 100% 300%;
     background-position: 0% 0%;
-    border: 2px solid $dark-blue;
-    color: $dark-blue;
+    border: 2px solid var(--dark-blue);
+    color: var(--dark-blue);
 
     &:hover {
       background-position: 0% 100%;
-      border: 2px solid $blue;
-      color: $blue;
+      border: 2px solid var(--blue);
+      color: var(--blue);
     }
 
     &.dark {
       background-position: 0% 100%;
-      border: 2px solid $blue;
-      color: $blue;
+      border: 2px solid var(--blue);
+      color: var(--blue);
 
       &:hover {
         background-position: 0% 0%;
-        border: 2px solid $dark-blue;
-        color: $dark-blue;
+        border: 2px solid var(--dark-blue);
+        color: var(--dark-blue);
       }
     }
   }
 
   &.green {
-    background: linear-gradient(145deg, $green, $dark-green);
+    background: linear-gradient(145deg, var(--green), var(--dark-green));
     background-size: 100% 300%;
     background-position: 0% 0%;
-    border: 2px solid $dark-green;
-    color: $dark-green;
+    border: 2px solid var(--dark-green);
+    color: var(--dark-green);
 
     &:hover {
       background-position: 0% 100%;
-      border: 2px solid $green;
-      color: $green;
+      border: 2px solid var(--green);
+      color: var(--green);
     }
 
     &.dark {
       background-position: 0% 100%;
-      border: 2px solid $green;
-      color: $green;
+      border: 2px solid var(--green);
+      color: var(--green);
 
       &:hover {
         background-position: 0% 0%;
-        border: 2px solid $dark-green;
-        color: $dark-green;
+        border: 2px solid var(--dark-green);
+        color: var(--dark-green);
       }
     }
   }
 
   &.purple {
-    background: linear-gradient(145deg, $purple, $dark-purple);
+    background: linear-gradient(145deg, var(--purple), var(--dark-purple));
     background-size: 100% 300%;
     background-position: 0% 0%;
-    border: 2px solid $dark-purple;
-    color: $dark-purple;
+    border: 2px solid var(--dark-purple);
+    color: var(--dark-purple);
 
     &:hover {
       background-position: 0% 100%;
-      border: 2px solid $purple;
-      color: $purple;
+      border: 2px solid var(--purple);
+      color: var(--purple);
     }
 
     &.dark {
       background-position: 0% 100%;
-      border: 2px solid $purple;
-      color: $purple;
+      border: 2px solid var(--purple);
+      color: var(--purple);
 
       &:hover {
         background-position: 0% 0%;
-        border: 2px solid $dark-purple;
-        color: $dark-purple;
+        border: 2px solid var(--dark-purple);
+        color: var(--dark-purple);
       }
     }
   }
 
   &.red {
-    background: linear-gradient(145deg, $red, $dark-red);
+    background: linear-gradient(145deg, var(--red), var(--dark-red));
     background-size: 100% 300%;
     background-position: 0% 0%;
-    border: 2px solid $dark-red;
-    color: $dark-red;
+    border: 2px solid var(--dark-red);
+    color: var(--dark-red);
 
     &:hover {
       background-position: 0% 100%;
-      border: 2px solid $red;
-      color: $red;
+      border: 2px solid var(--red);
+      color: var(--red);
     }
 
     &.dark {
       background-position: 0% 100%;
-      border: 2px solid $red;
-      color: $red;
+      border: 2px solid var(--red);
+      color: var(--red);
 
       &:hover {
         background-position: 0% 0%;
-        border: 2px solid $dark-red;
-        color: $dark-red;
+        border: 2px solid var(--dark-red);
+        color: var(--dark-red);
       }
     }
   }

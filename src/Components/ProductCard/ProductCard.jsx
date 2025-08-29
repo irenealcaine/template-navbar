@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProductCard.scss";
+import "./ProductCard.css";
 import Button from "../Button/Button";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";

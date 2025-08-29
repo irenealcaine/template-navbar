@@ -1,4 +1,4 @@
-import "./BlogCard.scss";
+import "./BlogCard.css";
 import Button from "../Button/Button";
 
 const BlogCard = ({ title, image, subtitle, content, author, date }) => {
