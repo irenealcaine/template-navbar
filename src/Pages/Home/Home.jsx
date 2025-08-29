@@ -4,7 +4,7 @@ import Loader from "../../Components/Loader/Loader";
 import ProductCard from "../../Components/ProductCard/ProductCard";
 import { posts } from "../../Data/BlogPosts";
 import { products } from "../../Data/Products";
-import "./Home.scss";
+import "./Home.css";
 
 const Home = () => {
   return (
