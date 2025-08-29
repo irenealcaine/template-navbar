@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;700;900&family=Poppins:wght@200;400;700;900&display=swap");
-@import "src/Variables.scss";
+@import url("./Variables.css");
 
 * {
   font-family: "Poppins", sans-serif;
@@ -27,11 +27,11 @@ h4 {
   position: relative;
   width: fit-content;
 
-  background: linear-gradient(to right, $main, $dark-main);
+  background: linear-gradient(to right, var(--main), var(--dark-main));
   background-size: 100% 15%;
   background-position: 0% 87%;
   background-repeat: no-repeat;
-  transition: $transition;
+  transition: var(--transition);
 
   &:hover {
     background-size: 250% 100%;
