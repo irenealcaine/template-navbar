@@ -19,5 +19,8 @@
 
   --header-height: 50px;
 
+    --header-width: 200px;
+  --header-width-closed: 50px;
+
   --transition: all 0.3s ease;
 }
