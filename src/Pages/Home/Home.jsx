@@ -63,31 +63,35 @@ const Home = () => {
 
       <h2>Blog Card</h2>
 
-      {posts.slice(0, 1).map((post) => (
-        <BlogCard
-          key={post.id}
-          image={post.image}
-          title={post.title}
-          subtitle={post.subtitle}
-          content={post.content}
-          author={post.author}
-          date={post.date}
-        />
-      ))}
+      <div className="grid">
+        {posts.slice(0, 2).map((post) => (
+          <BlogCard
+            key={post.id}
+            image={post.image}
+            title={post.title}
+            subtitle={post.subtitle}
+            content={post.content}
+            author={post.author}
+            date={post.date}
+          />
+        ))}
+      </div>
 
       <h2>Product Card</h2>
 
-      {products.slice(0, 1).map((product) => (
-        <ProductCard
-          key={product.id}
-          image={product.image}
-          title={product.title}
-          price={product.price.main}
-          offer={product.price.offer}
-          onSale={product.price.onSale}
-          description={product.description}
-        />
-      ))}
+      <div className="grid">
+        {products.slice(0, 2).map((product) => (
+          <ProductCard
+            key={product.id}
+            image={product.image}
+            title={product.title}
+            price={product.price.main}
+            offer={product.price.offer}
+            onSale={product.price.onSale}
+            description={product.description}
+          />
+        ))}
+      </div>
     </div>
   );
 };

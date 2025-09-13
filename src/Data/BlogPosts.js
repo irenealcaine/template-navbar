@@ -5,7 +5,7 @@ export const posts = [
     slug: "introduction-to-javascript",
     subtitle: "A beginner's guide to JavaScript programming",
     image:
-      "https://www.dongee.com/tutoriales/content/images/2022/10/image-83.png",
+      "https://play-lh.googleusercontent.com/rfWOJQVBHoAZ_B43v0ySFlLmJBLtksVGAxGaFRh2ex4nOmNQ86qzG4sYWV63IKrXlvI",
     content:
       "JavaScript is a versatile and widely-used programming language that plays a pivotal role in web development. Its ability to enhance the interactivity and functionality of websites has made it an indispensable tool for both front-end and back-end development.",
     categories: ["Programming", "Web Development"],
@@ -17,7 +17,7 @@ export const posts = [
     title: "The Art of Cooking",
     slug: "the-art-of-cooking",
     subtitle: "Exploring the culinary world",
-    image: "image2.jpg",
+    image: "https://bansalgroup-assets.s3.ap-south-1.amazonaws.com/PRD/BansalOilAndFoods/2022/12/scale.jpg",
     content:
       "Cooking is not just a skill; it's an art that allows you to create...",
     categories: ["Cooking", "Food"],

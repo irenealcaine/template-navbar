@@ -30,7 +30,7 @@ export const products = [
       "Esta crema hidratante es como un abrazo para tu piel. ¿Quieres una piel suave y radiante? ¡Esta es tu solución! Esta fórmula mágica está llena de ingredientes ultra hidratantes que dejarán tu piel sintiéndose como la seda. Olvídate de la piel seca y escamosa, esta crema la mima y la consiente. Y lo mejor de todo, se absorbe rapidísimo, sin esa sensación pegajosa que odiamos. Además, el aroma es sutil y delicioso, como si la primavera se hubiera metido en un tubo. No dejes que tu piel sufra más, dale el cariño que se merece con esta crema maravillosa. ¡Pruébala y di adiós a la piel reseca!",
     category: "Otros",
     image:
-      "https://t1.ev.ltmcdn.com/es/posts/1/5/3/como_hacer_crema_hidratante_natural_1351_600.jpg",
+      "https://www.dia.es/product_images/823/823_ISO_0_ES.jpg?imwidth=392",
     stock: 20,
     rating: {
       rate: 9.8,

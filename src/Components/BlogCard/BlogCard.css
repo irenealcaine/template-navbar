@@ -5,8 +5,8 @@
   border: 2px solid var(--main);
   box-shadow: 2px 2px 5px var(--dark-main);
   border-radius: 5px;
-  margin: 5px;
   max-width: 300px;
+  height: fit-content;
   overflow: hidden;
 
   & .blog-card__image {

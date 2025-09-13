@@ -5,8 +5,8 @@
   border: 2px solid var(--main);
   box-shadow: 2px 2px 5px var(--dark-main);
   border-radius: 5px;
-  margin: 5px;
   max-width: 300px;
+  height: fit-content;
   /* overflow: hidden; */
   position: relative;
 
@@ -29,9 +29,9 @@
     font-weight: 700;
     font-size: 30px;
 
-    & .product-card__main {
-      text-decoration: line-through;
-    }
+  }
+  & .product-card__price__main {
+    text-decoration: line-through;
   }
 
   & .product-card__description {
@@ -49,5 +49,8 @@
     background-color: var(--main);
     padding: 5px 20px;
     border-radius: 5px;
+  }
+  & .product-button {
+    font-size: 14px;
   }
 }

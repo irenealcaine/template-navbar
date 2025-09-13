@@ -5,7 +5,11 @@
     gap: 5px;
     padding:5px
   }
-  .product-button {
-    font-size: 14px;
+
+  .grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
   }
 }
