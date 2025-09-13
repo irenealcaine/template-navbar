@@ -1,5 +1,6 @@
 import BlogCard from "../../Components/BlogCard/BlogCard";
 import Button from "../../Components/Button/Button";
+import Hr from "../../Components/Hr/Hr";
 import Loader from "../../Components/Loader/Loader";
 import ProductCard from "../../Components/ProductCard/ProductCard";
 import { posts } from "../../Data/BlogPosts";
@@ -26,6 +27,8 @@ const Home = () => {
         accusamus ut, veniam velit, amet dolore, at libero voluptatem iure?
       </p>
 
+      <Hr />
+
       <h2>Buttons</h2>
       <div className="buttons-container">
         <Button value={"Default"} href={"https://google.es"} />
@@ -47,12 +50,16 @@ const Home = () => {
         />
       </div>
 
+      <Hr />
+
       <h2>Loaders</h2>
       <Loader />
       <Loader color={"blue"} />
       <Loader color={"green"} />
       <Loader color={"red"} />
       <Loader color={"purple"} />
+
+      <Hr />
 
       <h2>Blog Card</h2>
 
