@@ -58,7 +58,7 @@ const Home = () => {
 
       <h2>Input</h2>
 
-      <Input placeholder={"placeholder"} />
+      <Input placeholder={"Placeholder"} />
 
       <Hr />
 
