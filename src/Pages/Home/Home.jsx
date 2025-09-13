@@ -1,3 +1,4 @@
+import BackButton from "../../Components/BackButton/BackButton";
 import BlogCard from "../../Components/BlogCard/BlogCard";
 import Button from "../../Components/Button/Button";
 import Hr from "../../Components/Hr/Hr";
@@ -50,6 +51,7 @@ const Home = () => {
           color={"purple"}
           disabled={true}
         />
+        <BackButton value={"Back Button"} />
       </div>
 
       <Hr />
