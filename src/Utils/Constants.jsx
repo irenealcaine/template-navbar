@@ -1,6 +1,9 @@
 import { PiAddressBookBold, PiAlarmBold } from "react-icons/pi";
 import { CgDatabase, CgTrello } from "react-icons/cg";
 
+import { LuGithub, LuLinkedin } from "react-icons/lu";
+import { TbWorldWww } from "react-icons/tb";
+
 export const navbarItems = [
   {
     name: "Page 1",
@@ -23,3 +26,20 @@ export const navbarItems = [
     icon: <CgTrello />,
   },
 ];
+
+
+export const socialMediaItems = [
+  {
+    "name": "LinkedIn",
+    "icon": <LuLinkedin />,
+    "url": "https://www.linkedin.es"
+  }, {
+    "name": "GitHub",
+    "icon": <LuGithub />,
+    "url": "https://www.github.es"
+  }, {
+    "name": "Web",
+    "icon": <TbWorldWww />,
+    "url": "https://www.irenealcainealvarez.es"
+  },
+]
