@@ -3,6 +3,7 @@ import Button from "../../Components/Button/Button";
 import Hr from "../../Components/Hr/Hr";
 import Loader from "../../Components/Loader/Loader";
 import ProductCard from "../../Components/ProductCard/ProductCard";
+import Tag from "../../Components/Tag/Tag";
 import { posts } from "../../Data/BlogPosts";
 import { products } from "../../Data/Products";
 import "./Home.css";
@@ -30,7 +31,7 @@ const Home = () => {
       <Hr />
 
       <h2>Buttons</h2>
-      <div className="buttons-container">
+      <div className="grid">
         <Button value={"Default"} href={"https://google.es"} />
         <Button
           value={"Secondary"}
@@ -53,11 +54,24 @@ const Home = () => {
       <Hr />
 
       <h2>Loaders</h2>
-      <Loader />
-      <Loader color={"blue"} />
-      <Loader color={"green"} />
-      <Loader color={"red"} />
-      <Loader color={"purple"} />
+
+      <div className="grid">
+        <Loader />
+        <Loader color={"blue"} />
+        <Loader color={"green"} />
+        <Loader color={"red"} />
+        <Loader color={"purple"} />
+      </div>
+
+      <Hr />
+
+      <h2>Tags</h2>
+      <div className="grid">
+        <Tag tag={"Tag 1"} />
+        <Tag tag={"Tag 2"} />
+        <Tag tag={"Tag 3"} />
+        <Tag tag={"Tag 4"} />
+      </div>
 
       <Hr />
 
