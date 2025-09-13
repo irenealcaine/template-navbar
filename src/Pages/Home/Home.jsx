@@ -1,6 +1,7 @@
 import BlogCard from "../../Components/BlogCard/BlogCard";
 import Button from "../../Components/Button/Button";
 import Hr from "../../Components/Hr/Hr";
+import Input from "../../Components/Input/Input";
 import Loader from "../../Components/Loader/Loader";
 import ProductCard from "../../Components/ProductCard/ProductCard";
 import Tag from "../../Components/Tag/Tag";
@@ -50,6 +51,12 @@ const Home = () => {
           disabled={true}
         />
       </div>
+
+      <Hr />
+
+      <h2>Input</h2>
+
+      <Input placeholder={"placeholder"} />
 
       <Hr />
 
