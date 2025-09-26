@@ -1,20 +1,22 @@
 .progress-bar {
-    --thickness: 4px;
-    --percent: 0;
+  --thickness: 4px;
+  --percent: 0;
+  --completed: var(--green);
+  --non-completed: var(--light);
 
-    position:relative;
-    margin: 16px 0;
-    width: 100%;
-    height: var(--thickness);
-    background: linear-gradient( to right, 
-      var(--green) calc(var(--percent) * 1%),
-      var(--light) calc(var(--percent) * 1%)
-    );
+  position: relative;
+  margin: 16px 0;
+  width: 100%;
+  height: var(--thickness);
+  background: linear-gradient(
+    to right,
+    var(--completed) calc(var(--percent) * 1%),
+    var(--non-completed) calc(var(--percent) * 1%)
+  );
 
-    & .number{
-        position:absolute;
-        left: calc(var(--percent) * 1% - 8px);
-        top: -18px;
-    }   
+  & .number {
+    position: absolute;
+    left: calc(var(--percent) * 1% - 8px);
+    top: -18px;
   }
-  
+}

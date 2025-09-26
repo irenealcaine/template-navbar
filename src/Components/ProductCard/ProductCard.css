@@ -4,7 +4,7 @@
   background: linear-gradient(145deg, transparent 40%, var(--main) 120%);
   border: 2px solid var(--main);
   box-shadow: 2px 2px 5px var(--dark-main);
-  border-radius: var(--border-radius-small);
+  border-radius: var(--border-radius-large);
   max-width: 300px;
   height: fit-content;
   /* overflow: hidden; */
@@ -14,6 +14,7 @@
     width: 100%;
     aspect-ratio: 4/3;
     object-fit: cover;
+    border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
   }
 
   & .product-card__info {
