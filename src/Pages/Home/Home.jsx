@@ -94,25 +94,25 @@ const Home = () => {
           nonCompleted={`var(--dark-main)`}
         />
         <RadialProgress
-          number={20}
+          number={25}
           size={35}
           completed={"var(--blue)"}
           nonCompleted={`var(--dark-blue)`}
         />
         <RadialProgress
-          number={30}
+          number={40}
           size={40}
           completed={"var(--green)"}
           nonCompleted={`var(--dark-green)`}
         />
         <RadialProgress
-          number={40}
+          number={55}
           size={45}
           completed={"var(--red)"}
           nonCompleted={`var(--dark-red)`}
         />
         <RadialProgress
-          number={50}
+          number={70}
           size={50}
           completed={"var(--purple)"}
           nonCompleted={`var(--dark-purple)`}
@@ -124,22 +124,22 @@ const Home = () => {
         nonCompleted={`var(--dark-main)`}
       />
       <ProgressBar
-        number={20}
+        number={25}
         completed={"var(--blue)"}
         nonCompleted={`var(--dark-blue)`}
       />
       <ProgressBar
-        number={30}
+        number={40}
         completed={"var(--green)"}
         nonCompleted={`var(--dark-green)`}
       />
       <ProgressBar
-        number={40}
+        number={55}
         completed={"var(--red)"}
         nonCompleted={`var(--dark-red)`}
       />
       <ProgressBar
-        number={50}
+        number={70}
         completed={"var(--purple)"}
         nonCompleted={`var(--dark-purple)`}
       />
