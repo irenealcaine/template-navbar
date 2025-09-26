@@ -87,10 +87,36 @@ const Home = () => {
       <Hr />
       <h2>Progress Bars</h2>
       <div className="grid">
-        <RadialProgress number={100} size={30} />
-        <RadialProgress number={80} size={40} />
-        <RadialProgress number={60} size={50} />
-        <RadialProgress number={40} size={60} />
+        <RadialProgress
+          number={10}
+          size={30}
+          completed={"var(--main)"}
+          nonCompleted={`var(--dark-main)`}
+        />
+        <RadialProgress
+          number={20}
+          size={35}
+          completed={"var(--blue)"}
+          nonCompleted={`var(--dark-blue)`}
+        />
+        <RadialProgress
+          number={30}
+          size={40}
+          completed={"var(--green)"}
+          nonCompleted={`var(--dark-green)`}
+        />
+        <RadialProgress
+          number={40}
+          size={45}
+          completed={"var(--red)"}
+          nonCompleted={`var(--dark-red)`}
+        />
+        <RadialProgress
+          number={50}
+          size={50}
+          completed={"var(--purple)"}
+          nonCompleted={`var(--dark-purple)`}
+        />
       </div>
       <ProgressBar
         number={10}

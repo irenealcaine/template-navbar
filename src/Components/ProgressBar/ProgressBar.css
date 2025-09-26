@@ -10,9 +10,16 @@
   height: var(--thickness);
   background: linear-gradient(
     to right,
-    var(--completed) calc(var(--percent) * 1%),
-    var(--non-completed) calc(var(--percent) * 1%)
+    var(--non-completed) calc(var(--percent) * 1%),
+    var(--completed) calc(var(--percent) * 1%)
   );
+  &.dark {
+    background: linear-gradient(
+      to right,
+      var(--completed) calc(var(--percent) * 1%),
+      var(--non-completed) calc(var(--percent) * 1%)
+    );
+  }
 
   & .number {
     position: absolute;

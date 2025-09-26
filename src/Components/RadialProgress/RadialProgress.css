@@ -2,6 +2,9 @@
   --size: 40px;
   --thickness: 3px;
   --percent: 0;
+  --completed: var(--green);
+  --non-completed: var(--light);
+
   width: var(--size);
   height: var(--size);
   border-radius: var(--border-radius-full);
@@ -9,9 +12,16 @@
   place-items: center;
   position: relative;
   background: conic-gradient(
-    var(--green) calc(var(--percent) * 3.6deg),
-    var(--light) 0deg
+    var(--non-completed) calc(var(--percent) * 3.6deg),
+    var(--completed) 0deg
   );
+
+  &.dark {
+    background: conic-gradient(
+      var(--completed) calc(var(--percent) * 3.6deg),
+      var(--non-completed) 0deg
+    );
+  }
 
   &::before {
     content: "";
