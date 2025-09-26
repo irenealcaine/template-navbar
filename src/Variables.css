@@ -19,8 +19,11 @@
 
   --header-height: 50px;
 
-    --header-width: 200px;
+  --header-width: 200px;
   --header-width-closed: 50px;
 
   --transition: all 0.3s ease;
+  --border-radius-small: 8px;
+  --border-radius-large: 16px;
+  --border-radius-full: 500px;
 }

@@ -1,28 +1,26 @@
 .input {
-    background-color: transparent;
-    border: 2px solid var(--dark-main);
-    padding: 5px 15px;
-  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid var(--dark-main);
+  padding: 5px 15px;
+  border-radius: var(--border-radius-small);
   font-weight: 700;
   font-size: 16px;
   width: 100%;
 
+  &:focus {
+    background-color: var(--main);
+    border: 2px solid var(--main);
+    outline: none;
+  }
+
+  &.dark {
+    border: 2px solid var(--main);
+    color: var(--light);
+
     &:focus {
-        background-color: var(--main);
-        border: 2px solid var(--main);
-        outline: none;
+      background-color: var(--dark-main);
+      border: 2px solid var(--dark-main);
+      outline: none;
     }
-
-    &.dark {
-        border: 2px solid var(--main);
-        color: var(--light);
-
-        &:focus {
-            background-color: var(--dark-main);
-            border: 2px solid var(--dark-main);
-            outline: none;
-        }
-
-    }
-
+  }
 }

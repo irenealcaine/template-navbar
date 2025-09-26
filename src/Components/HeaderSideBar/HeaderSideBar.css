@@ -27,7 +27,7 @@ header {
     justify-content: center;
     align-items: center;
     .logo {
-      border-radius: 100rem;
+      border-radius: var(--border-radius-full);
       border: 2px solid var(--dark-main);
       transition: var(--transition);
 
@@ -105,7 +105,7 @@ header {
     right: -15px;
     background-color: var(--main);
     border: 2px solid var(--dark-main);
-    border-radius: 100px;
+    border-radius: var(--border-radius-full);
     display: flex;
     justify-content: center;
     align-items: center;

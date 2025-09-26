@@ -4,7 +4,7 @@
   --percent: 0;
   width: var(--size);
   height: var(--size);
-  border-radius: 50%;
+  border-radius: var(--border-radius-full);
   display: grid;
   place-items: center;
   position: relative;
@@ -17,7 +17,7 @@
     content: "";
     position: absolute;
     inset: calc(var(--size) / 10);
-    border-radius: 50%;
+    border-radius: var(--border-radius-full);
     background: var(--light);
   }
 
@@ -26,7 +26,7 @@
       content: "";
       position: absolute;
       inset: calc(var(--size) / 10);
-      border-radius: 50%;
+      border-radius: var(--border-radius-full);
       background: var(--dark);
     }
   }

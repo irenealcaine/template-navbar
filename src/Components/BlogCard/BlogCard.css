@@ -4,7 +4,7 @@
   background: linear-gradient(145deg, transparent 40%, var(--main) 120%);
   border: 2px solid var(--main);
   box-shadow: 2px 2px 5px var(--dark-main);
-  border-radius: 5px;
+  border-radius: var(--border-radius-large);
   max-width: 300px;
   height: fit-content;
   overflow: hidden;

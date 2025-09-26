@@ -10,9 +10,9 @@
   padding-right: 20px;
   padding-left: 20px;
 
-     /* fixed if you wanna to see it always, absolute if you wanna it to stay in top */
+  /* fixed if you wanna to see it always, absolute if you wanna it to stay in top */
   position: fixed;
-   /* position: absolute; */
+  /* position: absolute; */
 
   right: 0;
   left: 0;
@@ -32,7 +32,7 @@
 
     .logo {
       height: calc(var(--header-height) - 10px);
-      border-radius: 100rem;
+      border-radius: var(--border-radius-full);
       border: 2px solid var(--dark-main);
       transition: var(--transition);
 
@@ -47,7 +47,6 @@
     gap: 25px;
 
     .navigation-item {
-
       &::before,
       &::after {
         content: "";
@@ -55,12 +54,11 @@
         background-color: var(--dark-main);
         position: absolute;
         transition: var(--transition);
-        top: 50%
+        top: 50%;
       }
 
       &:hover {
         text-decoration: underline;
-
       }
 
       &.active {
@@ -71,7 +69,7 @@
         &::after {
           width: 3px;
           height: 100%;
-          top: 0
+          top: 0;
         }
 
         &::before {
@@ -83,7 +81,6 @@
         }
 
         &.dark {
-
           &::before,
           &::after {
             background-color: var(--main);
@@ -115,7 +112,7 @@
         z-index: 10;
         background: var(--main);
         border: 2px solid var(--dark-main);
-        border-radius: 15px;
+        border-radius: var(--border-radius-large);
 
         /* full width */
         /* left: 5px; */

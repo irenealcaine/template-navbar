@@ -2,7 +2,7 @@
 
 .button {
   padding: 5px 15px;
-  border-radius: 5px;
+  border-radius: var(--border-radius-small);
   transition: var(--transition);
   cursor: pointer;
   font-weight: 700;
@@ -24,7 +24,6 @@
   display: flex;
   align-content: center;
   justify-content: center;
-
 
   &:hover {
     border: 2px solid var(--main);

@@ -4,7 +4,7 @@
   background: linear-gradient(145deg, transparent 40%, var(--main) 120%);
   border: 2px solid var(--main);
   box-shadow: 2px 2px 5px var(--dark-main);
-  border-radius: 5px;
+  border-radius: var(--border-radius-small);
   max-width: 300px;
   height: fit-content;
   /* overflow: hidden; */
@@ -28,7 +28,6 @@
   & .product-card__price {
     font-weight: 700;
     font-size: 30px;
-
   }
   & .product-card__price__main {
     text-decoration: line-through;
@@ -48,7 +47,7 @@
     font-weight: 700;
     background-color: var(--main);
     padding: 5px 20px;
-    border-radius: 5px;
+    border-radius: var(--border-radius-small);
   }
   & .product-button {
     font-size: 14px;
