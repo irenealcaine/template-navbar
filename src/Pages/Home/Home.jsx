@@ -5,6 +5,8 @@ import Hr from "../../Components/Hr/Hr";
 import Input from "../../Components/Input/Input";
 import Loader from "../../Components/Loader/Loader";
 import ProductCard from "../../Components/ProductCard/ProductCard";
+import RadialProgress from "../../Components/RadialProgress/RadialProgress";
+import ProgressBar from "../../Components/ProgressBar/ProgressBar";
 import Tag from "../../Components/Tag/Tag";
 import { posts } from "../../Data/BlogPosts";
 import { products } from "../../Data/Products";
@@ -81,6 +83,20 @@ const Home = () => {
         <Tag tag={"Tag 3"} />
         <Tag tag={"Tag 4"} />
       </div>
+
+      <Hr />
+      <h2>Progress Bars</h2>
+      <div className="grid">
+        <RadialProgress number={100} size={30} />
+        <RadialProgress number={80} size={40} />
+        <RadialProgress number={60} size={50} />
+        <RadialProgress number={40} size={60} />
+      </div>
+      <ProgressBar number={100}/>
+      <ProgressBar number={75}/>
+      <ProgressBar number={50}/>
+      <ProgressBar number={25}/>
+      <ProgressBar number={0}/>
 
       <Hr />
 
