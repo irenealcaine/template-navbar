@@ -13,10 +13,22 @@ import { products } from "../../Data/Products";
 import "./Home.css";
 import List from "../../Components/List/List";
 import Modal from "../../Components/Model/Modal";
-import { useState } from "react"; //modal
+import Toast from "../../Components/Toast/Toast";
+import { useState } from "react"; //modal y toast
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [toasts, setToasts] = useState([]);
+
+  //toasts
+  const addToast = (message, type) => {
+    const id = Date.now();
+    setToasts([...toasts, { id, message, type }]);
+  };
+
+  const removeToast = (id) => {
+    setToasts(toasts.filter((t) => t.id !== id));
+  };
 
   return (
     <div className="home">
@@ -190,7 +202,20 @@ const Home = () => {
           <p>Este es un modal reutilizable ✨</p>
           <button onClick={() => setIsOpen(false)}>Cerrar</button>
         </Modal>
-        <Button value={"PopUp"} />
+        <Button
+          value={"Toast"}
+          onClick={() => addToast("Acción completada ✅", "success")}
+        />
+
+        {toasts.map(({ id, message, type }) => (
+          <Toast
+            key={id}
+            message={message}
+            type={type}
+            duration={3000}
+            onClose={() => removeToast(id)}
+          />
+        ))}
       </div>
       <Hr />
 
