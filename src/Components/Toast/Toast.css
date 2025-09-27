@@ -11,13 +11,13 @@
 
 .toast.info {
   background: var(--blue);
-} /* azul */
+}
 .toast.success {
   background: var(--green);
-} /* verde */
+}
 .toast.error {
   background: var(--red);
-} /* rojo */
+}
 
 @keyframes slideIn {
   from {
