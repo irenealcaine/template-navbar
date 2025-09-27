@@ -12,8 +12,12 @@ import { posts } from "../../Data/BlogPosts";
 import { products } from "../../Data/Products";
 import "./Home.css";
 import List from "../../Components/List/List";
+import Modal from "../../Components/Model/Modal";
+import { useState } from "react"; //modal
 
 const Home = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="home">
       <h1>Home</h1>
@@ -177,10 +181,17 @@ const Home = () => {
 
       <h2>Interactions</h2>
       <div className="grid">
-        <Button value={"Modal"} />
+        <Button value={"Modal"} onClick={() => setIsOpen(true)} />
+        <Modal
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+          title="Mi modal"
+        >
+          <p>Este es un modal reutilizable ✨</p>
+          <button onClick={() => setIsOpen(false)}>Cerrar</button>
+        </Modal>
         <Button value={"PopUp"} />
       </div>
-
       <Hr />
 
       <h2>Blog Card</h2>
