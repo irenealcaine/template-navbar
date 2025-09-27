@@ -17,8 +17,8 @@ import Toast from "../../Components/Toast/Toast";
 import { useState } from "react"; //modal y toast
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [toasts, setToasts] = useState([]);
+  const [isOpen, setIsOpen] = useState(false); //modal
+  const [toasts, setToasts] = useState([]); //toast
 
   //toasts
   const addToast = (message, type) => {
@@ -71,6 +71,10 @@ const Home = () => {
       <Hr />
 
       <h2>Table</h2>
+
+      <Hr />
+
+      <h2>Accordeon</h2>
 
       <Hr />
 
@@ -203,8 +207,19 @@ const Home = () => {
           <button onClick={() => setIsOpen(false)}>Cerrar</button>
         </Modal>
         <Button
-          value={"Toast"}
-          onClick={() => addToast("Acción completada ✅", "success")}
+          value={"Toast Success"}
+          color={"green"}
+          onClick={() => addToast("Success", "success")}
+        />
+        <Button
+          color={"blue"}
+          value={"Toast Info"}
+          onClick={() => addToast("Info", "info")}
+        />
+        <Button
+          value={"Toast Error"}
+          color={"red"}
+          onClick={() => addToast("Error", "error")}
         />
 
         {toasts.map(({ id, message, type }) => (
