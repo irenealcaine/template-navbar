@@ -14,7 +14,8 @@
     width: 100%;
     aspect-ratio: 4/3;
     object-fit: cover;
-    border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+    border-radius: calc(var(--border-radius-small) + 6px)
+      calc(var(--border-radius-small) + 6px) 0 0;
   }
 
   & .product-card__info {
