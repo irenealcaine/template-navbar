@@ -11,6 +11,7 @@ import Tag from "../../Components/Tag/Tag";
 import { posts } from "../../Data/BlogPosts";
 import { products } from "../../Data/Products";
 import "./Home.css";
+import List from "../../Components/List/List";
 
 const Home = () => {
   return (
@@ -31,6 +32,29 @@ const Home = () => {
         porro numquam repellat cum delectus. Aliquid doloremque aperiam rem
         accusamus ut, veniam velit, amet dolore, at libero voluptatem iure?
       </p>
+
+      <Hr />
+
+      <h2>Lists</h2>
+      <div className="grid">
+        <List ordered={"ordered"}>
+          <li>Element 1</li>
+          <li>Element 2</li>
+          <li>Element 3</li>
+        </List>
+
+        <div style={{ marginRight: 16 + "px" }}></div>
+
+        <List>
+          <li>Element 1</li>
+          <li>Element 2</li>
+          <li>Element 3</li>
+        </List>
+      </div>
+
+      <Hr />
+
+      <h2>Table</h2>
 
       <Hr />
 
@@ -60,7 +84,12 @@ const Home = () => {
 
       <h2>Input</h2>
 
-      <Input placeholder={"Placeholder"} />
+      <Input placeholder={"Text"} />
+      <Input placeholder={"Pass"} />
+      <Input placeholder={"Text Area"} />
+      <Input placeholder={"Select"} />
+      <Input placeholder={"Checkox"} />
+      <Input placeholder={"Switch"} />
 
       <Hr />
 
@@ -143,6 +172,14 @@ const Home = () => {
         completed={"var(--purple)"}
         nonCompleted={`var(--dark-purple)`}
       />
+
+      <Hr />
+
+      <h2>Interactions</h2>
+      <div className="grid">
+        <Button value={"Modal"} />
+        <Button value={"PopUp"} />
+      </div>
 
       <Hr />
 

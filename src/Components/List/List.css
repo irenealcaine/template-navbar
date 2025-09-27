@@ -1,0 +1,41 @@
+ul {
+  &.list {
+    list-style-type: disc;
+
+    & li {
+      margin-left: 16px;
+
+      &::marker {
+        color: var(--main);
+      }
+    }
+    &.dark {
+      & li {
+        &::marker {
+          color: var(--dark-main);
+        }
+      }
+    }
+  }
+}
+
+ol {
+  &.list {
+    list-style-type: decimal;
+
+    & li {
+      margin-left: 16px;
+
+      &::marker {
+        color: var(--main);
+      }
+    }
+    &.dark {
+      & li {
+        &::marker {
+          color: var(--dark-main);
+        }
+      }
+    }
+  }
+}
