@@ -1,10 +1,15 @@
 import { PiAddressBookBold, PiAlarmBold } from "react-icons/pi";
 import { CgDatabase, CgTrello } from "react-icons/cg";
-
+import { IoHomeOutline } from "react-icons/io5";
 import { LuGithub, LuLinkedin } from "react-icons/lu";
 import { TbWorldWww } from "react-icons/tb";
 
 export const navbarItems = [
+  {
+    name: "Home",
+    slug: "",
+    icon: <IoHomeOutline />,
+  },
   {
     name: "Page 1",
     slug: "page1",
@@ -27,19 +32,20 @@ export const navbarItems = [
   },
 ];
 
-
 export const socialMediaItems = [
   {
-    "name": "LinkedIn",
-    "icon": <LuLinkedin />,
-    "url": "https://www.linkedin.es"
-  }, {
-    "name": "GitHub",
-    "icon": <LuGithub />,
-    "url": "https://www.github.es"
-  }, {
-    "name": "Web",
-    "icon": <TbWorldWww />,
-    "url": "https://www.irenealcainealvarez.es"
+    name: "LinkedIn",
+    icon: <LuLinkedin />,
+    url: "https://www.linkedin.es",
   },
-]
+  {
+    name: "GitHub",
+    icon: <LuGithub />,
+    url: "https://www.github.es",
+  },
+  {
+    name: "Web",
+    icon: <TbWorldWww />,
+    url: "https://www.irenealcainealvarez.es",
+  },
+];
