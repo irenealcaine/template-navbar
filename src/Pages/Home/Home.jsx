@@ -15,6 +15,7 @@ import List from "../../Components/List/List";
 import Modal from "../../Components/Model/Modal";
 import Toast from "../../Components/Toast/Toast";
 import { useState } from "react"; //modal y toast
+import Table from "../../Components/Table/Table";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false); //modal
@@ -71,6 +72,24 @@ const Home = () => {
       <Hr />
 
       <h2>Table</h2>
+      <Table>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Offer</th>
+          <th>Rate</th>
+          <th>Stock</th>
+        </tr>
+        {products.map((product) => (
+          <tr>
+            <td>{product.title}</td>
+            <td>{product.price.main}</td>
+            <td>{product.price.onSale && product.price.offer}</td>
+            <td>{product.rating.rate}</td>
+            <td>{product.stock}</td>
+          </tr>
+        ))}
+      </Table>
 
       <Hr />
 

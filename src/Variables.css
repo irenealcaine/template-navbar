@@ -8,14 +8,20 @@
   --dark-blue: #014d80;
   --green: #22ee66;
   --dark-green: #00642b;
+
   --purple: #bc75ff;
   --dark-purple: #430180;
+  --purple-transparent: #bc75ff44;
+  --dark-purple-transparent: #43018044;
+
   --red: #ff7575;
   --dark-red: #800101;
 
   /* main color */
   --main: var(--purple);
   --dark-main: var(--dark-purple);
+  --main-transparent: var(--purple-transparent);
+  --dark-main-transparent: var(--dark-purple-transparent);
 
   --header-height: 50px;
 

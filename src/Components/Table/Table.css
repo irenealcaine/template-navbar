@@ -1,0 +1,26 @@
+.table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0px;
+
+  tr {
+    th {
+      text-align: left;
+      padding: 2px 5px;
+    }
+    td {
+      padding: 2px 5px;
+    }
+  }
+  & tr:nth-child(odd) {
+    td {
+      background-color: var(--dark-main-transparent);
+    }
+  }
+  & tr:first-child {
+    th {
+      background-color: var(--dark-main);
+    }
+  }
+}
