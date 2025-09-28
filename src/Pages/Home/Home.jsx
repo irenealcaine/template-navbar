@@ -121,14 +121,23 @@ const Home = () => {
 
       <Hr />
 
-      <h2>Input</h2>
+      <h2>Inputs</h2>
 
-      <Input placeholder={"Text"} />
-      <Input placeholder={"Pass"} />
-      <Input placeholder={"Text Area"} />
-      <Input placeholder={"Select"} />
-      <Input placeholder={"Checkox"} />
-      <Input placeholder={"Switch"} />
+      <Input type={"text"} placeholder={"Text"} />
+      <div style={{ marginBottom: 8 + "px" }}></div>
+      <Input type={"password"} placeholder={"Pass"} />
+      <div style={{ marginBottom: 8 + "px" }}></div>
+      <Input type={"textarea"} placeholder={"Text Area"} />
+      <div style={{ marginBottom: 8 + "px" }}></div>
+      <Input type={"select"} placeholder={"Select"}>
+        <option value="a">1</option>
+        <option value="b">2</option>
+        <option value="c">3</option>
+      </Input>
+      <div style={{ marginBottom: 8 + "px" }}></div>
+      <Input type={"checkbox"} placeholder={"Checkox"} />
+      <div style={{ marginBottom: 8 + "px" }}></div>
+      <Input placeholder={"Switch (TODO)"} />
 
       <Hr />
 
@@ -191,21 +200,25 @@ const Home = () => {
         completed={"var(--main)"}
         nonCompleted={`var(--dark-main)`}
       />
+      <div style={{ marginBottom: 20 + "px" }}></div>
       <ProgressBar
         number={25}
         completed={"var(--blue)"}
         nonCompleted={`var(--dark-blue)`}
       />
+      <div style={{ marginBottom: 20 + "px" }}></div>
       <ProgressBar
         number={40}
         completed={"var(--green)"}
         nonCompleted={`var(--dark-green)`}
       />
+      <div style={{ marginBottom: 20 + "px" }}></div>
       <ProgressBar
         number={55}
         completed={"var(--red)"}
         nonCompleted={`var(--dark-red)`}
       />
+      <div style={{ marginBottom: 20 + "px" }}></div>
       <ProgressBar
         number={70}
         completed={"var(--purple)"}
