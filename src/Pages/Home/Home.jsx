@@ -16,6 +16,7 @@ import Modal from "../../Components/Model/Modal";
 import Toast from "../../Components/Toast/Toast";
 import { useState } from "react"; //modal y toast
 import Table from "../../Components/Table/Table";
+import Accordion from "../../Components/Accordion/Accordion";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false); //modal
@@ -95,7 +96,15 @@ const Home = () => {
 
       <Hr />
 
-      <h2>Accordeon</h2>
+      <h2>Accordion</h2>
+
+      <Accordion title="Sección 1">
+        <p>Contenido de la sección 1.</p>
+      </Accordion>
+
+      <Accordion title="Sección 2" defaultOpen>
+        <p>Contenido de la sección 2 abierto por defecto.</p>
+      </Accordion>
 
       <Hr />
 
