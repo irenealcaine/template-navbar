@@ -121,6 +121,10 @@ const Home = () => {
         <Button value={"Green"} href={"https://google.es"} color={"green"} />
         <Button value={"Red"} href={"https://google.es"} color={"red"} />
         <Button value={"Purple"} href={"https://google.es"} color={"purple"} />
+        <Button value={"Orange"} href={"https://google.es"} color={"orange"} />
+        <Button value={"Yellow"} href={"https://google.es"} color={"yellow"} />
+        <Button value={"Pink"} href={"https://google.es"} color={"pink"} />
+        <Button value={"Lime"} href={"https://google.es"} color={"lime"} />
         <Button
           value={"Disabled"}
           href={"https://google.es"}

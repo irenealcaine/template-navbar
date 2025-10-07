@@ -66,8 +66,7 @@
 
   &.blue {
     background: linear-gradient(145deg, var(--blue), var(--dark-blue));
-    background-size: 100% 300%;
-    background-position: 0% 0%;
+    background-size: 100% 500%;
     border: 2px solid var(--dark-blue);
     color: var(--dark-blue);
 
@@ -92,8 +91,7 @@
 
   &.green {
     background: linear-gradient(145deg, var(--green), var(--dark-green));
-    background-size: 100% 300%;
-    background-position: 0% 0%;
+    background-size: 100% 500%;
     border: 2px solid var(--dark-green);
     color: var(--dark-green);
 
@@ -118,8 +116,7 @@
 
   &.purple {
     background: linear-gradient(145deg, var(--purple), var(--dark-purple));
-    background-size: 100% 300%;
-    background-position: 0% 0%;
+    background-size: 100% 500%;
     border: 2px solid var(--dark-purple);
     color: var(--dark-purple);
 
@@ -144,8 +141,7 @@
 
   &.red {
     background: linear-gradient(145deg, var(--red), var(--dark-red));
-    background-size: 100% 300%;
-    background-position: 0% 0%;
+    background-size: 100% 500%;
     border: 2px solid var(--dark-red);
     color: var(--dark-red);
 
@@ -164,6 +160,106 @@
         background-position: 0% 0%;
         border: 2px solid var(--dark-red);
         color: var(--dark-red);
+      }
+    }
+  }
+
+  &.orange {
+    background: linear-gradient(145deg, var(--orange), var(--dark-orange));
+    background-size: 100% 500%;
+    border: 2px solid var(--dark-orange);
+    color: var(--dark-orange);
+
+    &:hover {
+      background-position: 0% 100%;
+      border: 2px solid var(--orange);
+      color: var(--orange);
+    }
+
+    &.dark {
+      background-position: 0% 100%;
+      border: 2px solid var(--orange);
+      color: var(--orange);
+
+      &:hover {
+        background-position: 0% 0%;
+        border: 2px solid var(--dark-orange);
+        color: var(--dark-orange);
+      }
+    }
+  }
+
+  &.yellow {
+    background: linear-gradient(145deg, var(--yellow), var(--dark-yellow));
+    background-size: 100% 500%;
+    border: 2px solid var(--dark-yellow);
+    color: var(--dark-yellow);
+
+    &:hover {
+      background-position: 0% 100%;
+      border: 2px solid var(--yellow);
+      color: var(--yellow);
+    }
+
+    &.dark {
+      background-position: 0% 100%;
+      border: 2px solid var(--yellow);
+      color: var(--yellow);
+
+      &:hover {
+        background-position: 0% 0%;
+        border: 2px solid var(--dark-yellow);
+        color: var(--dark-yellow);
+      }
+    }
+  }
+
+  &.pink {
+    background: linear-gradient(145deg, var(--pink), var(--dark-pink));
+    background-size: 100% 500%;
+    border: 2px solid var(--dark-pink);
+    color: var(--dark-pink);
+
+    &:hover {
+      background-position: 0% 100%;
+      border: 2px solid var(--pink);
+      color: var(--pink);
+    }
+
+    &.dark {
+      background-position: 0% 100%;
+      border: 2px solid var(--pink);
+      color: var(--pink);
+
+      &:hover {
+        background-position: 0% 0%;
+        border: 2px solid var(--dark-pink);
+        color: var(--dark-pink);
+      }
+    }
+  }
+
+  &.lime {
+    background: linear-gradient(145deg, var(--lime), var(--dark-lime));
+    background-size: 100% 500%;
+    border: 2px solid var(--dark-lime);
+    color: var(--dark-lime);
+
+    &:hover {
+      background-position: 0% 100%;
+      border: 2px solid var(--lime);
+      color: var(--lime);
+    }
+
+    &.dark {
+      background-position: 0% 100%;
+      border: 2px solid var(--lime);
+      color: var(--lime);
+
+      &:hover {
+        background-position: 0% 0%;
+        border: 2px solid var(--dark-lime);
+        color: var(--dark-lime);
       }
     }
   }
