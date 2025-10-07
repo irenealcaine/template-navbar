@@ -219,28 +219,52 @@ const Home = () => {
           nonCompleted={`var(--dark-main)`}
         />
         <RadialProgress
-          number={25}
+          number={20}
           size={35}
           completed={"var(--blue)"}
           nonCompleted={`var(--dark-blue)`}
         />
         <RadialProgress
-          number={40}
+          number={30}
           size={40}
           completed={"var(--green)"}
           nonCompleted={`var(--dark-green)`}
         />
         <RadialProgress
-          number={55}
+          number={40}
           size={45}
           completed={"var(--red)"}
           nonCompleted={`var(--dark-red)`}
         />
         <RadialProgress
-          number={70}
+          number={50}
           size={50}
           completed={"var(--purple)"}
           nonCompleted={`var(--dark-purple)`}
+        />
+        <RadialProgress
+          number={60}
+          size={55}
+          completed={"var(--orange)"}
+          nonCompleted={`var(--dark-orange)`}
+        />
+        <RadialProgress
+          number={70}
+          size={60}
+          completed={"var(--yellow)"}
+          nonCompleted={`var(--dark-yellow)`}
+        />
+        <RadialProgress
+          number={80}
+          size={65}
+          completed={"var(--pink)"}
+          nonCompleted={`var(--dark-pink)`}
+        />
+        <RadialProgress
+          number={90}
+          size={70}
+          completed={"var(--lime)"}
+          nonCompleted={`var(--dark-lime)`}
         />
       </div>
       <ProgressBar
@@ -250,27 +274,51 @@ const Home = () => {
       />
       <div style={{ marginBottom: 20 + "px" }}></div>
       <ProgressBar
-        number={25}
+        number={20}
         completed={"var(--blue)"}
         nonCompleted={`var(--dark-blue)`}
       />
       <div style={{ marginBottom: 20 + "px" }}></div>
       <ProgressBar
-        number={40}
+        number={30}
         completed={"var(--green)"}
         nonCompleted={`var(--dark-green)`}
       />
       <div style={{ marginBottom: 20 + "px" }}></div>
       <ProgressBar
-        number={55}
+        number={40}
         completed={"var(--red)"}
         nonCompleted={`var(--dark-red)`}
       />
       <div style={{ marginBottom: 20 + "px" }}></div>
       <ProgressBar
-        number={70}
+        number={50}
         completed={"var(--purple)"}
         nonCompleted={`var(--dark-purple)`}
+      />
+      <div style={{ marginBottom: 20 + "px" }}></div>
+      <ProgressBar
+        number={60}
+        completed={"var(--orange)"}
+        nonCompleted={`var(--dark-orange)`}
+      />
+      <div style={{ marginBottom: 20 + "px" }}></div>
+      <ProgressBar
+        number={70}
+        completed={"var(--yellow)"}
+        nonCompleted={`var(--dark-yellow)`}
+      />
+      <div style={{ marginBottom: 20 + "px" }}></div>
+      <ProgressBar
+        number={80}
+        completed={"var(--pink)"}
+        nonCompleted={`var(--dark-pink)`}
+      />
+      <div style={{ marginBottom: 20 + "px" }}></div>
+      <ProgressBar
+        number={90}
+        completed={"var(--lime)"}
+        nonCompleted={`var(--dark-lime)`}
       />
 
       <Hr />
