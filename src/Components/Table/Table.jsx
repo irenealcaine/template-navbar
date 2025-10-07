@@ -1,7 +1,13 @@
 import "./Table.css";
+import { useContext } from "react";
+import { DarkModeContext } from "../../Context/darkModeContext";
 
 const Table = ({ children }) => {
-  return <table className="table">{children}</table>;
+  const { darkMode } = useContext(DarkModeContext);
+
+  return (
+    <table className={`table ${darkMode ? "dark" : ""}`}>{children}</table>
+  );
 };
 
 export default Table;

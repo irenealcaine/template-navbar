@@ -15,12 +15,25 @@
   }
   & tr:nth-child(odd) {
     td {
-      background-color: var(--dark-main-transparent);
+      background-color: var(--main-transparent);
     }
   }
   & tr:first-child {
     th {
-      background-color: var(--dark-main);
+      background-color: var(--main);
+    }
+  }
+
+  &.dark {
+    & tr:nth-child(odd) {
+      td {
+        background-color: var(--dark-main-transparent);
+      }
+    }
+    & tr:first-child {
+      th {
+        background-color: var(--dark-main);
+      }
     }
   }
 }
