@@ -184,10 +184,29 @@ const Home = () => {
 
       <h2>Tags</h2>
       <div className="grid">
-        <Tag tag={"Tag 1"} />
-        <Tag tag={"Tag 2"} />
-        <Tag tag={"Tag 3"} />
-        <Tag tag={"Tag 4"} />
+        <Tag tag={"Default"} />
+        <Tag tag={"Blue"} color={"blue"} />
+        <Tag tag={"Green"} color={"green"} />
+        <Tag tag={"Red"} color={"red"} />
+        <Tag tag={"Purple"} color={"purple"} />
+        <Tag tag={"Orange"} color={"orange"} />
+        <Tag tag={"Yellow"} color={"yellow"} />
+        <Tag tag={"Pink"} color={"pink"} />
+        <Tag tag={"Lime"} color={"lime"} />
+      </div>
+
+      <div style={{ marginBottom: 8 + "px" }}></div>
+
+      <div className="grid">
+        <Tag tag={"Default"} transparent={true} />
+        <Tag tag={"Blue"} color={"blue"} transparent={true} />
+        <Tag tag={"Green"} color={"green"} transparent={true} />
+        <Tag tag={"Red"} color={"red"} transparent={true} />
+        <Tag tag={"Purple"} color={"purple"} transparent={true} />
+        <Tag tag={"Orange"} color={"orange"} transparent={true} />
+        <Tag tag={"Yellow"} color={"yellow"} transparent={true} />
+        <Tag tag={"Pink"} color={"pink"} transparent={true} />
+        <Tag tag={"Lime"} color={"lime"} transparent={true} />
       </div>
 
       <Hr />
