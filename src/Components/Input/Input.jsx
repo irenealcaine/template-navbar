@@ -27,6 +27,16 @@ const Input = ({ type, placeholder, value, onChange, children }) => {
     );
   }
 
+  if (type === "checkbox") {
+    return (
+      <label className={`checkbox ${darkMode && "dark"}`}>
+        <input type="checkbox" checked={value} onChange={onChange} />
+        <span className="checkmark"></span>
+        {placeholder && <span className="label-text">{placeholder}</span>}
+      </label>
+    );
+  }
+
   return (
     <input
       type={type}

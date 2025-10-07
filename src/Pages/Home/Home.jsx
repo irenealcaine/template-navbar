@@ -20,6 +20,7 @@ import Table from "../../Components/Table/Table";
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false); //modal
   const [toasts, setToasts] = useState([]); //toast
+  const [checked, setChecked] = useState([]); //checkbox
 
   //toasts
   const addToast = (message, type) => {
@@ -135,7 +136,12 @@ const Home = () => {
         <option value="c">3</option>
       </Input>
       <div style={{ marginBottom: 8 + "px" }}></div>
-      <Input type={"checkbox"} placeholder={"Checkox"} />
+      <Input
+        type={"checkbox"}
+        placeholder={"Checkox"}
+        value={checked}
+        onChange={(e) => setChecked(e.target.checked)}
+      />
       <div style={{ marginBottom: 8 + "px" }}></div>
       <Input placeholder={"Switch (TODO)"} />
 
