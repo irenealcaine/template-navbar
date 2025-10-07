@@ -174,6 +174,10 @@ const Home = () => {
         <Loader color={"green"} />
         <Loader color={"red"} />
         <Loader color={"purple"} />
+        <Loader color={"orange"} />
+        <Loader color={"yellow"} />
+        <Loader color={"pink"} />
+        <Loader color={"lime"} />
       </div>
 
       <Hr />

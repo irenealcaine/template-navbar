@@ -84,6 +84,50 @@
       border-color: transparent var(--dark-purple) var(--purple) transparent;
     }
   }
+
+  &.orange {
+    border-color: transparent var(--dark-orange) var(--orange) transparent;
+
+    &::after {
+      border-color: transparent var(--dark-orange) var(--orange) transparent;
+    }
+    &::before {
+      border-color: transparent var(--dark-orange) var(--orange) transparent;
+    }
+  }
+
+  &.yellow {
+    border-color: transparent var(--dark-yellow) var(--yellow) transparent;
+
+    &::after {
+      border-color: transparent var(--dark-yellow) var(--yellow) transparent;
+    }
+    &::before {
+      border-color: transparent var(--dark-yellow) var(--yellow) transparent;
+    }
+  }
+
+  &.pink {
+    border-color: transparent var(--dark-pink) var(--pink) transparent;
+
+    &::after {
+      border-color: transparent var(--dark-pink) var(--pink) transparent;
+    }
+    &::before {
+      border-color: transparent var(--dark-pink) var(--pink) transparent;
+    }
+  }
+
+  &.lime {
+    border-color: transparent var(--dark-lime) var(--lime) transparent;
+
+    &::after {
+      border-color: transparent var(--dark-lime) var(--lime) transparent;
+    }
+    &::before {
+      border-color: transparent var(--dark-lime) var(--lime) transparent;
+    }
+  }
 }
 
 @keyframes rotation {
