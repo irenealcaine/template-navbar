@@ -247,8 +247,9 @@ const Home = () => {
           onClose={() => setIsOpen(false)}
           title="Mi modal"
         >
-          <p>Este es un modal reutilizable ✨</p>
-          <button onClick={() => setIsOpen(false)}>Cerrar</button>
+          <p>Este es un modal reutilizable</p>
+          <div style={{ marginBottom: 20 + "px" }}></div>
+          <Button onClick={() => setIsOpen(false)} value={"Cerrar"} />
         </Modal>
         <Button
           value={"Toast Success"}

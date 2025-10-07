@@ -1,45 +1,45 @@
 .modal-backdrop {
   position: fixed;
   inset: 0; /* top:0, right:0, bottom:0, left:0 */
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--dark-main-transparent);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
-}
+  backdrop-filter: blur(10px);
 
-.modal-content {
-  background: #fff;
-  border-radius: 12px;
-  max-width: 500px;
-  width: 90%;
-  padding: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  animation: fadeIn 0.2s ease-out;
-}
+  & .modal-content {
+    background: var(--light);
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    padding: 16px;
+    box-shadow: 0 10px 25px var(--dark-main-transparent);
+    animation: fadeIn 0.2s ease-out;
+    &.dark {
+      background: var(--dark);
+    }
+  }
 
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
-}
+  & .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
 
-.modal-header h2 {
-  font-size: 1.2rem;
-  margin: 0;
-}
+    & h3 {
+      margin: 0;
+    }
 
-.modal-close {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
+    & .modal-close {
+      cursor: pointer;
+      transition: all 0.3s ease;
 
-.modal-body {
-  font-size: 1rem;
-  color: #333;
+      &:hover {
+        color: var(--red);
+      }
+    }
+  }
 }
 
 @keyframes fadeIn {
