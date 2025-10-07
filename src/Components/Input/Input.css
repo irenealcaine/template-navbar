@@ -77,3 +77,59 @@
     }
   }
 }
+
+/* ===== SWITCH ===== */
+.switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+  font-weight: 700;
+
+  & input {
+    display: none;
+  }
+}
+
+/* Slider */
+.switch-slider {
+  position: relative;
+  width: 40px;
+  height: 22px;
+  background-color: var(--main);
+  border-radius: 30px;
+  transition: background 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--light);
+    transition: transform 0.3s ease;
+  }
+}
+
+.switch-wrapper input:checked + .switch-slider {
+  background-color: var(--dark-main);
+}
+
+.switch-wrapper input:checked + .switch-slider::before {
+  transform: translateX(18px);
+}
+
+.switch-wrapper.dark .switch-slider {
+  background-color: var(--dark-main);
+}
+
+.switch-wrapper.dark input:checked + .switch-slider {
+  background-color: var(--main);
+}
+
+.switch-wrapper.dark .label-text {
+  color: var(--light);
+}

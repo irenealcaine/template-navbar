@@ -21,6 +21,7 @@ const Home = () => {
   const [isOpen, setIsOpen] = useState(false); //modal
   const [toasts, setToasts] = useState([]); //toast
   const [checked, setChecked] = useState([]); //checkbox
+  const [enabled, setEnabled] = useState([]); //switch
 
   //toasts
   const addToast = (message, type) => {
@@ -143,7 +144,12 @@ const Home = () => {
         onChange={(e) => setChecked(e.target.checked)}
       />
       <div style={{ marginBottom: 8 + "px" }}></div>
-      <Input placeholder={"Switch (TODO)"} />
+      <Input
+        type="switch"
+        placeholder="Switch"
+        value={enabled}
+        onChange={(e) => setEnabled(e.target.checked)}
+      />
 
       <Hr />
 
