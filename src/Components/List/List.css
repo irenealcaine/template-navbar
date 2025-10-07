@@ -6,13 +6,13 @@ ul {
       margin-left: 16px;
 
       &::marker {
-        color: var(--main);
+        color: var(--dark-main);
       }
     }
     &.dark {
       & li {
         &::marker {
-          color: var(--dark-main);
+          color: var(--main);
         }
       }
     }
@@ -27,13 +27,14 @@ ol {
       margin-left: 16px;
 
       &::marker {
-        color: var(--main);
+        color: var(--dark-main);
+        font-weight: bold;
       }
     }
     &.dark {
       & li {
         &::marker {
-          color: var(--dark-main);
+          color: var(--main);
         }
       }
     }
