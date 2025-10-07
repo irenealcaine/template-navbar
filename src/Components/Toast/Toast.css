@@ -7,16 +7,27 @@
   opacity: 0;
   animation: slideIn 0.3s forwards, fadeOut 0.3s forwards;
   animation-delay: 0s, 2.7s; /* fadeOut empieza justo antes de duration=3000ms */
-}
 
-.toast.info {
-  background: var(--blue);
-}
-.toast.success {
-  background: var(--green);
-}
-.toast.error {
-  background: var(--red);
+  &.info {
+    background: var(--blue);
+    &.dark {
+      background: var(--dark-blue);
+    }
+  }
+
+  &.success {
+    background: var(--green);
+    &.dark {
+      background: var(--dark-green);
+    }
+  }
+
+  &.error {
+    background: var(--red);
+    &.dark {
+      background: var(--dark-red);
+    }
+  }
 }
 
 @keyframes slideIn {

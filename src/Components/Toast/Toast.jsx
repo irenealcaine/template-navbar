@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import "./Toast.css";
+import { DarkModeContext } from "../../Context/darkModeContext";
 
 export default function Toast({
   message,
@@ -12,5 +13,9 @@ export default function Toast({
     return () => clearTimeout(timer);
   }, [duration, onClose]);
 
-  return <div className={`toast ${type}`}>{message}</div>;
+  const { darkMode } = useContext(DarkModeContext);
+
+  return (
+    <div className={`toast ${type} ${darkMode ? "dark" : ""}`}>{message}</div>
+  );
 }
