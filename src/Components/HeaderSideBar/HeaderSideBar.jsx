@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./HeaderSideBar.css";
-import logo from "../../Assets/Images/logo.jpg";
+import logo from "../../Assets/Images/spiral.svg";
 import { Link, useLocation } from "react-router-dom";
 import { navbarItems } from "../../Utils/Constants";
 import { useState } from "react";
@@ -46,8 +46,9 @@ const HeaderSideBar = () => {
             <li key={navbarItem.slug} onClick={() => setIsMenuClosed(true)}>
               <Link
                 to={`/${navbarItem.slug}`}
-                className={`navigation-item  ${darkMode ? "dark" : ""} ${location.pathname === `/${navbarItem.slug}` && "active"
-                  }`}
+                className={`navigation-item  ${darkMode ? "dark" : ""} ${
+                  location.pathname === `/${navbarItem.slug}` && "active"
+                }`}
               >
                 <span className={`navigation-item-name ${menuActiveClass}`}>
                   {navbarItem.name}

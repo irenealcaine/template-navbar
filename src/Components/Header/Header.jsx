@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import "./Header.css";
-import logo from "../../Assets/Images/logo.jpg";
+import logo from "../../Assets/Images/spiral.svg";
 import { Link, useLocation } from "react-router-dom";
 import { navbarItems } from "../../Utils/Constants";
 import { useState } from "react";

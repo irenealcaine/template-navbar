@@ -27,6 +27,7 @@ header {
     justify-content: center;
     align-items: center;
     .logo {
+      background-color: var(--light);
       border-radius: var(--border-radius-full);
       border: 2px solid var(--dark-main);
       transition: var(--transition);

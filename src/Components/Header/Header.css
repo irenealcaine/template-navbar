@@ -31,6 +31,7 @@
     display: flex;
 
     .logo {
+      background-color: var(--light);
       height: calc(var(--header-height) - 10px);
       border-radius: var(--border-radius-full);
       border: 2px solid var(--dark-main);
