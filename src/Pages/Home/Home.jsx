@@ -110,7 +110,7 @@ const Home = () => {
 
       <h2>Buttons</h2>
       <div className="grid">
-        <Button value={"Default"} href={"https://google.es"} />
+        <Button value={"Main colors"} href={"https://google.es"} />
         <Button
           value={"Secondary"}
           href={"https://google.es"}
@@ -184,7 +184,7 @@ const Home = () => {
 
       <h2>Tags</h2>
       <div className="grid">
-        <Tag tag={"Default"} />
+        <Tag tag={"Main colors"} />
         <Tag tag={"Blue"} color={"blue"} />
         <Tag tag={"Green"} color={"green"} />
         <Tag tag={"Red"} color={"red"} />
@@ -198,7 +198,7 @@ const Home = () => {
       <div style={{ marginBottom: 8 + "px" }}></div>
 
       <div className="grid">
-        <Tag tag={"Default"} transparent={true} />
+        <Tag tag={"Main colors"} transparent={true} />
         <Tag tag={"Blue"} color={"blue"} transparent={true} />
         <Tag tag={"Green"} color={"green"} transparent={true} />
         <Tag tag={"Red"} color={"red"} transparent={true} />

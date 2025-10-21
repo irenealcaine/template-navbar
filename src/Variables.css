@@ -45,10 +45,10 @@
   --dark-lime-transparent: #4d7c0f44;
 
   /* main color */
-  --main: var(--orange);
-  --dark-main: var(--dark-orange);
-  --main-transparent: var(--orange-transparent);
-  --dark-main-transparent: var(--dark-orange-transparent);
+  --main: var(--blue);
+  --dark-main: var(--dark-green);
+  --main-transparent: var(--blue-transparent);
+  --dark-main-transparent: var(--dark-green-transparent);
 
   --header-height: 50px;
 
