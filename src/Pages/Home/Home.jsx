@@ -17,12 +17,14 @@ import Toast from "../../Components/Toast/Toast";
 import { useState } from "react"; //modal y toast
 import Table from "../../Components/Table/Table";
 import Accordion from "../../Components/Accordion/Accordion";
+import Pagination from "../../Components/Pagination/Pagination";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false); //modal
   const [toasts, setToasts] = useState([]); //toast
   const [checked, setChecked] = useState([]); //checkbox
   const [enabled, setEnabled] = useState([]); //switch
+  const [currentPage, setCurrentPage] = useState(3); //pagination
 
   //toasts
   const addToast = (message, type) => {
@@ -319,6 +321,15 @@ const Home = () => {
         number={90}
         completed={"var(--lime)"}
         nonCompleted={`var(--dark-lime)`}
+      />
+
+      <Hr />
+
+      <h2>Pagination</h2>
+      <Pagination
+        currentPage={currentPage}
+        totalPages={12}
+        onPageChange={setCurrentPage}
       />
 
       <Hr />

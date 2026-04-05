@@ -3,13 +3,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    padding:5px
+    padding: 5px;
   }
 
-  .grid{
+  .grid {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-
   }
 }
