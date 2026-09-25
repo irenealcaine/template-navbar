@@ -7,6 +7,7 @@ export default function Toast({
   type = "info",
   duration = 3000,
   onClose,
+  index = 0,
 }) {
   const onCloseRef = useRef(onClose);
   onCloseRef.current = onClose;
@@ -19,6 +20,11 @@ export default function Toast({
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <div className={`toast ${type} ${darkMode ? "dark" : ""}`}>{message}</div>
+    <div
+      className={`toast ${type} ${darkMode ? "dark" : ""}`}
+      style={{ "--toast-duration": `${duration}ms`, "--toast-index": index }}
+    >
+      {message}
+    </div>
   );
 }

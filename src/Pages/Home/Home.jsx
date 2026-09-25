@@ -27,13 +27,13 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState(3); //pagination
 
   //toasts
-  const addToast = (message, type) => {
+  const addToast = (message, type, duration = 3000) => {
     const id = Date.now();
-    setToasts([...toasts, { id, message, type }]);
+    setToasts((prev) => [...prev, { id, message, type, duration }]);
   };
 
   const removeToast = (id) => {
-    setToasts(toasts.filter((t) => t.id !== id));
+    setToasts((prev) => prev.filter((t) => t.id !== id));
   };
 
   return (
@@ -349,29 +349,30 @@ const Home = () => {
         <Button
           value={"Toast Success"}
           color={"green"}
-          onClick={() => addToast("Success", "success")}
+          onClick={() => addToast("Success", "success", 3000)}
         />
         <Button
           color={"blue"}
           value={"Toast Info"}
-          onClick={() => addToast("Info", "info")}
+          onClick={() => addToast("Info", "info", 5000)}
         />
         <Button
           value={"Toast Error"}
           color={"red"}
-          onClick={() => addToast("Error", "error")}
+          onClick={() => addToast("Error", "error", 2000)}
         />
-
-        {toasts.map(({ id, message, type }) => (
-          <Toast
-            key={id}
-            message={message}
-            type={type}
-            duration={3000}
-            onClose={() => removeToast(id)}
-          />
-        ))}
       </div>
+
+      {toasts.map((toast, index) => (
+        <Toast
+          key={toast.id}
+          index={index}
+          message={toast.message}
+          type={toast.type}
+          duration={toast.duration}
+          onClose={() => removeToast(toast.id)}
+        />
+      ))}
       <Hr />
 
       <h2>Blog Card</h2>

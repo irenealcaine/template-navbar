@@ -1,12 +1,13 @@
 .toast {
   position: fixed;
-  bottom: 50px;
+  bottom: calc(70px + var(--toast-index) * 70px);
   right: 20px;
   padding: 12px 16px;
   border-radius: var(--border-radius-small);
   opacity: 0;
   animation: slideIn 0.3s forwards, fadeOut 0.3s forwards;
-  animation-delay: 0s, 2.7s; /* fadeOut empieza justo antes de duration=3000ms */
+  animation-delay: 0s, calc(var(--toast-duration) - 300ms);
+  z-index: 100;
 
   &.info {
     background: var(--blue);
