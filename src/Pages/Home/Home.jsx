@@ -22,8 +22,8 @@ import Pagination from "../../Components/Pagination/Pagination";
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false); //modal
   const [toasts, setToasts] = useState([]); //toast
-  const [checked, setChecked] = useState([]); //checkbox
-  const [enabled, setEnabled] = useState([]); //switch
+  const [checked, setChecked] = useState(false); //checkbox
+  const [enabled, setEnabled] = useState(false); //switch
   const [currentPage, setCurrentPage] = useState(3); //pagination
 
   //toasts
@@ -86,7 +86,7 @@ const Home = () => {
           <th>Stock</th>
         </tr>
         {products.map((product) => (
-          <tr>
+          <tr key={product.id}>
             <td>{product.title}</td>
             <td>{product.price.main}</td>
             <td>{product.price.onSale && product.price.offer}</td>

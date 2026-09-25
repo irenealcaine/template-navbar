@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useRef } from "react";
 import "./Toast.css";
 import { DarkModeContext } from "../../Context/darkModeContext";
 
@@ -8,10 +8,13 @@ export default function Toast({
   duration = 3000,
   onClose,
 }) {
+  const onCloseRef = useRef(onClose);
+  onCloseRef.current = onClose;
+
   useEffect(() => {
-    const timer = setTimeout(onClose, duration);
+    const timer = setTimeout(() => onCloseRef.current(), duration);
     return () => clearTimeout(timer);
-  }, [duration, onClose]);
+  }, [duration]);
 
   const { darkMode } = useContext(DarkModeContext);
 

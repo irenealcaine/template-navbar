@@ -3,9 +3,9 @@ import { DarkModeContext } from "../../Context/darkModeContext";
 import { useContext } from "react";
 
 export default function Modal({ isOpen, onClose, title, children }) {
-  if (!isOpen) return null;
-
   const { darkMode } = useContext(DarkModeContext);
+
+  if (!isOpen) return null;
 
   return (
     <div

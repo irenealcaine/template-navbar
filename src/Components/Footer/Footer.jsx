@@ -1,13 +1,11 @@
 import { useContext } from "react";
 import { navbarItems, socialMediaItems } from "../../Utils/Constants";
 import "./Footer.css";
-import { Link, useLocation } from "react-router-dom";
 import { DarkModeContext } from "../../Context/darkModeContext";
 import { MdOutlineLightMode, MdOutlineNightlight } from "react-icons/md";
 
 const Footer = () => {
   const { dispatch, darkMode } = useContext(DarkModeContext);
-  const location = useLocation();
 
   return (
     <nav className={` footer ${darkMode ? "dark" : ""}`}>
@@ -17,7 +15,7 @@ const Footer = () => {
             key={SMItem.name}
             className={`footer-item ${darkMode ? "dark" : ""}`}
           >
-            <a href={SMItem.url} target="_blank">{SMItem.icon}</a>
+            <a href={SMItem.url} target="_blank" rel="noopener noreferrer">{SMItem.icon}</a>
           </li>
         ))}
 

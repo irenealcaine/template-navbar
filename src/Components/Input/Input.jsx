@@ -11,6 +11,7 @@ const Input = ({ type, placeholder, value, onChange, children }) => {
         className={`input ${darkMode && "dark"}`}
         placeholder={placeholder}
         value={value}
+        onChange={onChange}
       ></textarea>
     );
   }
@@ -21,6 +22,7 @@ const Input = ({ type, placeholder, value, onChange, children }) => {
         className={`input ${darkMode && "dark"}`}
         placeholder={placeholder}
         value={value}
+        onChange={onChange}
       >
         {children}
       </select>
