@@ -13,8 +13,7 @@
   }
 
   .grid--cards {
-    row-gap: 40px;
-    column-gap: 24px;
+    gap: 24px;
   }
 
   .typography-showcase {

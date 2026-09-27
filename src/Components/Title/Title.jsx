@@ -10,9 +10,13 @@ const TITLES = {
   h6: "h6",
 };
 
-const Title = ({ children, type = "h2", font }) => {
+const Title = ({ children, type = "h2", font, className }) => {
   const Tag = TITLES[type] || "h2";
-  return <Tag style={font && { fontFamily: FONTS[font] }}>{children}</Tag>;
+  return (
+    <Tag className={className} style={font && { fontFamily: FONTS[font] }}>
+      {children}
+    </Tag>
+  );
 };
 
 export default Title;
