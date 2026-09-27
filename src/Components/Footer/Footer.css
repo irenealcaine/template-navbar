@@ -1,82 +1,81 @@
 @import "../../Variables.css";
 
 .footer {
-  background-color: var(--main);
-  border-top: 2px solid var(--dark-main);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 20px;
-
-  padding: 10px 10px;
-
-  /*  fixed if you wanna to see it always, absolute if you wanna it to stay in bottom */
   position: fixed;
-  /* position: absolute; */
+  right: 12px;
+  bottom: 12px;
 
-  /* if you like it tiny */
-  border-left: 2px solid var(--dark-main);
-  border-top-left-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  /* large */
-  /* left: 0; */
+  padding: 6px 12px;
 
-  right: 0;
-  bottom: 0;
+  background: var(--main-transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid var(--dark-main);
+  border-radius: var(--border-radius-full);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10;
   transition: var(--transition);
+
+  &.dark {
+    background: var(--dark-main-transparent);
+    border: 2px solid var(--main);
+  }
 
   .footer-list {
     display: flex;
-    justify-content: flex-end;
-
-    gap: 15px;
+    align-items: center;
+    gap: 6px;
 
     .footer-item {
-      font-size: 20px;
-
+      font-size: 18px;
+      width: 34px;
+      height: 34px;
+      border-radius: var(--border-radius-full);
       display: flex;
       justify-content: center;
       align-items: center;
+      color: var(--dark-main);
+      transition: var(--transition);
 
-      & div, & a{
+      & div,
+      & a {
         display: flex;
         justify-content: center;
         align-items: center;
+        color: inherit;
 
-        & svg{
+        & svg {
           display: flex;
           justify-content: center;
           align-items: center;
         }
       }
 
-      &:hover{
-        filter: drop-shadow(0 0 2px var(--dark-main)) drop-shadow(0 0 4px var(--dark-main))
+      &:hover {
+        background-color: var(--main-transparent);
+        filter: drop-shadow(0 0 2px var(--dark-main))
+          drop-shadow(0 0 4px var(--dark-main));
       }
 
-      &.color-option{
-        margin-left: 15px;
-        cursor:pointer;
+      &.color-option {
+        margin-left: 18px;
+        cursor: pointer;
       }
     }
   }
 
   &.dark {
-    background-color: var(--dark-main);
-    border-top: 2px solid var(--main);
-    /* color: --dark; */
+    .footer-item {
+      color: var(--main);
 
-    /* only tiny */
-    border-left: 2px solid var(--main);
-
-
-    .footer-item{
-      &:hover{
-        filter: drop-shadow(0 0 2px var(--main)) drop-shadow(0 0 4px var(--main))
+      &:hover {
+        background-color: var(--dark-main-transparent);
+        filter: drop-shadow(0 0 2px var(--main)) drop-shadow(0 0 4px var(--main));
       }
     }
-
   }
-
-
 }
