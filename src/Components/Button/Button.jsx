@@ -6,13 +6,22 @@ import { Link } from "react-router-dom";
 const Button = ({ value, onClick, className, color, disabled, href, to }) => {
   const { darkMode } = useContext(DarkModeContext);
 
+  const isSecondary = color === "secondary";
+  const c = isSecondary || !color ? "var(--main)" : `var(--${color})`;
+  const dc = isSecondary || !color ? "var(--dark-main)" : `var(--dark-${color})`;
+  const style = { "--c": c, "--dc": dc };
+  const classes = `button ${className} ${darkMode ? "dark" : ""} ${
+    isSecondary ? "secondary" : ""
+  }`;
+
   if (href && !disabled) {
     return (
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={`button ${color} ${className} ${darkMode ? "dark" : ""}`}
+        className={classes}
+        style={style}
       >
         {value}
       </a>
@@ -21,10 +30,7 @@ const Button = ({ value, onClick, className, color, disabled, href, to }) => {
 
   if (to && !disabled) {
     return (
-      <Link
-        to={to}
-        className={`button ${color} ${className} ${darkMode ? "dark" : ""}`}
-      >
+      <Link to={to} className={classes} style={style}>
         {value}
       </Link>
     );
@@ -33,9 +39,9 @@ const Button = ({ value, onClick, className, color, disabled, href, to }) => {
   return (
     <button
       onClick={onClick}
-      className={`button ${!disabled ? color : "disabled"} ${className} ${darkMode ? "dark" : ""
-        }`}
+      className={`${classes} ${disabled ? "disabled" : ""}`}
       disabled={disabled}
+      style={style}
     >
       {value}
     </button>

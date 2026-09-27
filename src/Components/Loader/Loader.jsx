@@ -1,7 +1,12 @@
 import "./Loader.css";
 
 const Loader = ({ color }) => {
-  return <span className={`loader ${color}`}></span>;
+  const c = color ? `var(--${color})` : "var(--main)";
+  const dc = color ? `var(--dark-${color})` : "var(--dark-main)";
+
+  return (
+    <span className="loader" style={{ "--c": c, "--dc": dc }}></span>
+  );
 };
 
 export default Loader;
