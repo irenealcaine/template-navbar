@@ -1,6 +1,7 @@
 import BackButton from "../../Components/BackButton/BackButton";
 import Button from "../../Components/Button/Button";
 import Card from "../../Components/Card/Card";
+import CodeBlock from "../../Components/CodeBlock/CodeBlock";
 import Hr from "../../Components/Hr/Hr";
 import Input from "../../Components/Input/Input";
 import Loader from "../../Components/Loader/Loader";
@@ -111,21 +112,36 @@ const Home = () => {
 
       <Title type="h2">Tabs</Title>
 
-      <Tabs
+<Tabs
         tabs={[
           {
-            label: "TAB 1",
-            content: <p>TAB 1. Lorem ipsum dolor sit amet consectetur, adipiscing elit mauris tristique eget per, nullam magnis id facilisi. Nullam in laoreet bibendum consequat justo iaculis non nibh, tempor parturient massa enim scelerisque sapien senectus suspendisse, vel vehicula hendrerit convallis rutrum quam mus.</p>,
+            label: "Home",
+            content: <p>Contenido de la pestaña Home usando los colores main.</p>,
           },
           {
-            label: "TAB 2",
-            content: <p>TAB 2. Lorem ipsum dolor sit amet consectetur, adipiscing elit mauris tristique eget per, nullam magnis id facilisi. Nullam in laoreet bibendum consequat justo iaculis non nibh, tempor parturient massa enim scelerisque sapien senectus suspendisse, vel vehicula hendrerit convallis rutrum quam mus.</p>,
+            label: "Page 1",
+            content: <p>Contenido de la pestaña Page 1.</p>,
           },
           {
-            label: "TAB 3",
-            content: <p>TAB 3. Lorem ipsum dolor sit amet consectetur, adipiscing elit mauris tristique eget per, nullam magnis id facilisi. Nullam in laoreet bibendum consequat justo iaculis non nibh, tempor parturient massa enim scelerisque sapien senectus suspendisse, vel vehicula hendrerit convallis rutrum quam mus.</p>,
+            label: "Page 2",
+            content: <p>Contenido de la pestaña Page 2.</p>,
           },
         ]}
+      />
+
+      <Hr />
+
+      <Title type="h2">Code Block</Title>
+
+      <CodeBlock
+        language="jsx"
+        code={`const greeting = "Hola mundo";
+
+const saluda = (nombre) => {
+  console.log(\`${"${greeting}"}, \${nombre}!\`);
+};
+
+saluda("Irene");`}
       />
 
       <Hr />

@@ -1,0 +1,68 @@
+@import "../../Variables.css";
+
+.code-block {
+  width: fit-content;
+  max-width: 100%;
+  border: 2px solid var(--dark-main);
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  transition: var(--transition);
+
+  &.dark {
+    border: 2px solid var(--main);
+  }
+
+  .code-block__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 6px 14px;
+    background: var(--main);
+    color: var(--dark-main);
+
+    &.dark {
+      background: var(--dark-main);
+      color: var(--main);
+    }
+  }
+
+  .code-block__language {
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .code-block__copy {
+    padding: 3px 12px;
+    border: 2px solid currentColor;
+    border-radius: var(--border-radius-full);
+    background: transparent;
+    color: inherit;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+      background: var(--main-transparent);
+    }
+  }
+
+  &.dark .code-block__copy {
+    &:hover {
+      background: var(--dark-main-transparent);
+    }
+  }
+
+  .code-block__pre {
+    margin: 0;
+    padding: 16px;
+    background-color: var(--dark);
+    color: var(--light);
+    font-family: "Roboto Mono", monospace;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+}
