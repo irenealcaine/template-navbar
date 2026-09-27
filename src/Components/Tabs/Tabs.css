@@ -1,0 +1,56 @@
+@import "../../Variables.css";
+
+.tabs {
+  width: fit-content;
+  max-width: 100%;
+
+  .tabs__nav {
+    display: flex;
+    gap: 4px;
+    border-bottom: 2px solid var(--dark-main);
+    padding-bottom: 4px;
+  }
+
+  .tabs__tab {
+    padding: 8px 18px;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+    background: transparent;
+    color: var(--dark-main);
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover {
+      background: var(--main-transparent);
+    }
+
+    &.active {
+      background: var(--main);
+      color: var(--dark-main);
+    }
+  }
+
+  .tabs__panel {
+    padding: 16px 4px;
+  }
+
+  &.dark {
+    .tabs__nav {
+      border-bottom: 2px solid var(--main);
+    }
+
+    .tabs__tab {
+      color: var(--main);
+
+      &:hover {
+        background: var(--dark-main-transparent);
+      }
+
+      &.active {
+        background: var(--dark-main);
+        color: var(--main);
+      }
+    }
+  }
+}

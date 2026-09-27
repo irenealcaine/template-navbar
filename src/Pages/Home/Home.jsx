@@ -7,6 +7,7 @@ import Loader from "../../Components/Loader/Loader";
 import RadialProgress from "../../Components/RadialProgress/RadialProgress";
 import ProgressBar from "../../Components/ProgressBar/ProgressBar";
 import Tag from "../../Components/Tag/Tag";
+import Tabs from "../../Components/Tabs/Tabs";
 import { posts } from "../../Data/BlogPosts";
 import { products } from "../../Data/Products";
 import { FaCartShopping } from "react-icons/fa6";
@@ -105,6 +106,27 @@ const Home = () => {
       <Accordion title="Sección 2" defaultOpen>
         <p>Contenido de la sección 2 abierto por defecto.</p>
       </Accordion>
+
+      <Hr />
+
+      <Title type="h2">Tabs</Title>
+
+      <Tabs
+        tabs={[
+          {
+            label: "TAB 1",
+            content: <p>TAB 1. Lorem ipsum dolor sit amet consectetur, adipiscing elit mauris tristique eget per, nullam magnis id facilisi. Nullam in laoreet bibendum consequat justo iaculis non nibh, tempor parturient massa enim scelerisque sapien senectus suspendisse, vel vehicula hendrerit convallis rutrum quam mus.</p>,
+          },
+          {
+            label: "TAB 2",
+            content: <p>TAB 2. Lorem ipsum dolor sit amet consectetur, adipiscing elit mauris tristique eget per, nullam magnis id facilisi. Nullam in laoreet bibendum consequat justo iaculis non nibh, tempor parturient massa enim scelerisque sapien senectus suspendisse, vel vehicula hendrerit convallis rutrum quam mus.</p>,
+          },
+          {
+            label: "TAB 3",
+            content: <p>TAB 3. Lorem ipsum dolor sit amet consectetur, adipiscing elit mauris tristique eget per, nullam magnis id facilisi. Nullam in laoreet bibendum consequat justo iaculis non nibh, tempor parturient massa enim scelerisque sapien senectus suspendisse, vel vehicula hendrerit convallis rutrum quam mus.</p>,
+          },
+        ]}
+      />
 
       <Hr />
 
