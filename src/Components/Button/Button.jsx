@@ -3,9 +3,19 @@ import { DarkModeContext } from "../../Context/darkModeContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 
-const Button = ({ value, onClick, className, color, disabled, href, to }) => {
+const Button = ({
+  value,
+  children,
+  onClick,
+  className,
+  color,
+  disabled,
+  href,
+  to,
+}) => {
   const { darkMode } = useContext(DarkModeContext);
 
+  const content = children ?? value;
   const isSecondary = color === "secondary";
   const c = isSecondary || !color ? "var(--main)" : `var(--${color})`;
   const dc = isSecondary || !color ? "var(--dark-main)" : `var(--dark-${color})`;
@@ -23,7 +33,7 @@ const Button = ({ value, onClick, className, color, disabled, href, to }) => {
         className={classes}
         style={style}
       >
-        {value}
+        {content}
       </a>
     );
   }
@@ -31,7 +41,7 @@ const Button = ({ value, onClick, className, color, disabled, href, to }) => {
   if (to && !disabled) {
     return (
       <Link to={to} className={classes} style={style}>
-        {value}
+        {content}
       </Link>
     );
   }
@@ -43,7 +53,7 @@ const Button = ({ value, onClick, className, color, disabled, href, to }) => {
       disabled={disabled}
       style={style}
     >
-      {value}
+      {content}
     </button>
   );
 };

@@ -4,7 +4,18 @@ import Button from "../Button/Button";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 
-const ProductCard = ({ title, price, offer, onSale, image, description }) => {
+const ProductCard = ({
+  title,
+  price,
+  offer,
+  onSale,
+  image,
+  description,
+  cartHref,
+  wishlistHref,
+  onCartClick,
+  onWishlistClick,
+}) => {
   return (
     <div className="product-card">
       <img className="product-card__image" src={image} alt={title} />
@@ -24,12 +35,14 @@ const ProductCard = ({ title, price, offer, onSale, image, description }) => {
       <div className="buttons-container">
         <Button
           value={<FaCartShopping />}
-          href={"https://google.es"}
+          href={cartHref}
+          onClick={onCartClick}
           className={"product-button"}
         />
         <Button
           value={<FaHeart />}
-          href={"https://google.es"}
+          href={wishlistHref}
+          onClick={onWishlistClick}
           color={"secondary"}
           className={"product-button"}
         />

@@ -13,7 +13,7 @@ import { products } from "../../Data/Products";
 import "./Home.css";
 import List from "../../Components/List/List";
 import Modal from "../../Components/Model/Modal";
-import Toast from "../../Components/Toast/Toast";
+import { useToast } from "../../Components/Toast/ToastContext";
 import { useState } from "react"; //modal y toast
 import Table from "../../Components/Table/Table";
 import Accordion from "../../Components/Accordion/Accordion";
@@ -21,20 +21,10 @@ import Pagination from "../../Components/Pagination/Pagination";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false); //modal
-  const [toasts, setToasts] = useState([]); //toast
   const [checked, setChecked] = useState(false); //checkbox
   const [enabled, setEnabled] = useState(false); //switch
   const [currentPage, setCurrentPage] = useState(3); //pagination
-
-  //toasts
-  const addToast = (message, type, duration = 3000) => {
-    const id = Date.now();
-    setToasts((prev) => [...prev, { id, message, type, duration }]);
-  };
-
-  const removeToast = (id) => {
-    setToasts((prev) => prev.filter((t) => t.id !== id));
-  };
+  const { toast } = useToast();
 
   return (
     <div className="home">
@@ -59,7 +49,7 @@ const Home = () => {
 
       <h2>Lists</h2>
       <div className="grid">
-        <List ordered={"ordered"}>
+        <List ordered>
           <li>Element 1</li>
           <li>Element 2</li>
           <li>Element 3</li>
@@ -268,30 +258,19 @@ const Home = () => {
         <Button
           value={"Toast Success"}
           color={"green"}
-          onClick={() => addToast("Success", "success", 3000)}
+          onClick={() => toast("Success", "success", 3000)}
         />
         <Button
           color={"blue"}
           value={"Toast Info"}
-          onClick={() => addToast("Info", "info", 5000)}
+          onClick={() => toast("Info", "info", 5000)}
         />
         <Button
           value={"Toast Error"}
           color={"red"}
-          onClick={() => addToast("Error", "error", 2000)}
+          onClick={() => toast("Error", "error", 2000)}
         />
       </div>
-
-      {toasts.map((toast, index) => (
-        <Toast
-          key={toast.id}
-          index={index}
-          message={toast.message}
-          type={toast.type}
-          duration={toast.duration}
-          onClose={() => removeToast(toast.id)}
-        />
-      ))}
       <Hr />
 
       <h2>Blog Card</h2>
