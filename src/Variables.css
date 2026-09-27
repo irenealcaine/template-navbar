@@ -55,6 +55,9 @@
   --font-title: "Mulish", sans-serif;
 
   --header-height: 50px;
+  --header-top: 8px;
+  --theme-switcher-height: 36px;
+  --theme-switcher-height-mobile: 70px;
 
   --header-width: 200px;
   --header-width-closed: 50px;

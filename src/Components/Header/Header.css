@@ -1,38 +1,41 @@
 @import url("../../Variables.css");
 
 .header {
-  background-color: var(--main);
-  border-bottom: 2px solid var(--dark-main);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: var(--header-height);
-  padding-right: 20px;
-  padding-left: 20px;
-
-  /* fixed if you wanna to see it always, absolute if you wanna it to stay in top */
   position: fixed;
-  /* position: absolute; */
+  top: calc(var(--theme-switcher-height) + var(--header-top));
+  left: 50%;
+  transform: translateX(-50%);
 
-  right: 0;
-  left: 0;
-  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: fit-content;
+  max-width: calc(100% - 24px);
+  height: var(--header-height);
+  padding: 0 12px 0 8px;
 
+  background: var(--main-transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid var(--dark-main);
+  border-radius: var(--border-radius-full);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   z-index: 10;
   transition: var(--transition);
 
   &.dark {
-    background-color: var(--dark-main);
-    border-bottom: 2px solid var(--main);
-    /* color: --dark; */
+    background: var(--dark-main-transparent);
+    border: 2px solid var(--main);
   }
 
   .logo-link {
     display: flex;
+    align-items: center;
 
     .logo {
       background-color: var(--light);
-      height: calc(var(--header-height) - 10px);
+      height: calc(var(--header-height) - 18px);
       border-radius: var(--border-radius-full);
       border: 2px solid var(--dark-main);
       transition: var(--transition);
@@ -45,47 +48,34 @@
 
   .navigation {
     display: flex;
-    gap: 25px;
+    gap: 6px;
 
     .navigation-item {
-      &::before,
-      &::after {
-        content: "";
-        height: 0;
-        background-color: var(--dark-main);
-        position: absolute;
-        transition: var(--transition);
-        top: 50%;
-      }
+      padding: 6px 14px;
+      border-radius: var(--border-radius-full);
+      color: var(--dark-main);
+      font-weight: 500;
+      transition: var(--transition);
 
       &:hover {
+        background-color: var(--main-transparent);
         text-decoration: underline;
       }
 
       &.active {
         font-weight: 700;
-        position: relative;
+        background-color: var(--main-transparent);
+      }
 
-        &::before,
-        &::after {
-          width: 3px;
-          height: 100%;
-          top: 0;
+      &.dark {
+        color: var(--main);
+
+        &:hover {
+          background-color: var(--dark-main-transparent);
         }
 
-        &::before {
-          left: -7px;
-        }
-
-        &::after {
-          right: -7px;
-        }
-
-        &.dark {
-          &::before,
-          &::after {
-            background-color: var(--main);
-          }
+        &.active {
+          background-color: var(--dark-main-transparent);
         }
       }
     }
@@ -94,34 +84,42 @@
   .menu-toggle {
     display: none;
     cursor: pointer;
+    color: var(--dark-main);
+    font-size: 20px;
+
+    &.dark {
+      color: var(--main);
+    }
   }
 }
 
 @media screen and (max-width: 768px) {
   .header {
+    top: calc(var(--theme-switcher-height-mobile) + var(--header-top));
+
     .navigation {
       display: none;
 
       &.active {
         display: flex;
         flex-direction: column;
-        padding: 20px 80px;
+        gap: 4px;
+        padding: 12px;
         position: absolute;
-        top: calc(var(--header-height) + 5px);
-        right: 5px;
+        top: calc(100% + 8px);
+        right: 0;
         text-align: center;
         z-index: 10;
-        background: var(--main);
+        background: var(--main-transparent);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         border: 2px solid var(--dark-main);
         border-radius: var(--border-radius-large);
-
-        /* full width */
-        /* left: 5px; */
+        min-width: 160px;
 
         &.dark {
-          background-color: var(--dark-main);
+          background: var(--dark-main-transparent);
           border: 2px solid var(--main);
-          /* color: --dark; */
         }
       }
     }
