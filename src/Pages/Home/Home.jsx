@@ -214,60 +214,15 @@ const Home = () => {
       <Hr />
       <h2>Progress Bars</h2>
       <div className="grid">
-        <RadialProgress
-          number={10}
-          size={30}
-          completed={"var(--main)"}
-          nonCompleted={`var(--dark-main)`}
-        />
-        <RadialProgress
-          number={20}
-          size={35}
-          completed={"var(--blue)"}
-          nonCompleted={`var(--dark-blue)`}
-        />
-        <RadialProgress
-          number={30}
-          size={40}
-          completed={"var(--green)"}
-          nonCompleted={`var(--dark-green)`}
-        />
-        <RadialProgress
-          number={40}
-          size={45}
-          completed={"var(--red)"}
-          nonCompleted={`var(--dark-red)`}
-        />
-        <RadialProgress
-          number={50}
-          size={50}
-          completed={"var(--purple)"}
-          nonCompleted={`var(--dark-purple)`}
-        />
-        <RadialProgress
-          number={60}
-          size={55}
-          completed={"var(--orange)"}
-          nonCompleted={`var(--dark-orange)`}
-        />
-        <RadialProgress
-          number={70}
-          size={60}
-          completed={"var(--yellow)"}
-          nonCompleted={`var(--dark-yellow)`}
-        />
-        <RadialProgress
-          number={80}
-          size={65}
-          completed={"var(--pink)"}
-          nonCompleted={`var(--dark-pink)`}
-        />
-        <RadialProgress
-          number={90}
-          size={70}
-          completed={"var(--lime)"}
-          nonCompleted={`var(--dark-lime)`}
-        />
+        <RadialProgress number={10} size={30} />
+        <RadialProgress number={20} size={35} color={"blue"} />
+        <RadialProgress number={30} size={40} color={"green"} />
+        <RadialProgress number={40} size={45} color={"red"} />
+        <RadialProgress number={50} size={50} color={"purple"} />
+        <RadialProgress number={60} size={55} color={"orange"} />
+        <RadialProgress number={70} size={60} color={"yellow"} />
+        <RadialProgress number={80} size={65} color={"pink"} />
+        <RadialProgress number={90} size={70} color={"lime"} />
       </div>
       <ProgressBar
         number={10}

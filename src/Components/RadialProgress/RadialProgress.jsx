@@ -2,8 +2,11 @@ import "./RadialProgress.css";
 import { DarkModeContext } from "../../Context/darkModeContext";
 import { useContext } from "react";
 
-const RadialProgress = ({ size, number, completed, nonCompleted }) => {
+const RadialProgress = ({ size, number, color }) => {
   const { darkMode } = useContext(DarkModeContext);
+
+  const completed = color ? `var(--${color})` : "var(--main)";
+  const nonCompleted = color ? `var(--dark-${color})` : "var(--dark-main)";
 
   return (
     <p

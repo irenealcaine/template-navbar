@@ -2,8 +2,8 @@
   --size: 40px;
   --thickness: 3px;
   --percent: 0;
-  --completed: var(--green);
-  --non-completed: var(--light);
+  --completed: var(--main);
+  --non-completed: var(--dark-main);
 
   width: var(--size);
   height: var(--size);
