@@ -1,15 +1,16 @@
 import BackButton from "../../Components/BackButton/BackButton";
-import BlogCard from "../../Components/BlogCard/BlogCard";
 import Button from "../../Components/Button/Button";
+import Card from "../../Components/Card/Card";
 import Hr from "../../Components/Hr/Hr";
 import Input from "../../Components/Input/Input";
 import Loader from "../../Components/Loader/Loader";
-import ProductCard from "../../Components/ProductCard/ProductCard";
 import RadialProgress from "../../Components/RadialProgress/RadialProgress";
 import ProgressBar from "../../Components/ProgressBar/ProgressBar";
 import Tag from "../../Components/Tag/Tag";
 import { posts } from "../../Data/BlogPosts";
 import { products } from "../../Data/Products";
+import { FaCartShopping } from "react-icons/fa6";
+import { FaHeart } from "react-icons/fa";
 import "./Home.css";
 import List from "../../Components/List/List";
 import Modal from "../../Components/Model/Modal";
@@ -280,34 +281,39 @@ const Home = () => {
       </div>
       <Hr />
 
-      <Title type="h2">Blog Card</Title>
+      <Title type="h2">Cards</Title>
 
-      <div className="grid">
+      <div className="grid grid--cards">
         {posts.slice(0, 2).map((post) => (
-          <BlogCard
+          <Card
             key={post.id}
             image={post.image}
             title={post.title}
             subtitle={post.subtitle}
-            content={post.content}
+            description={post.content}
             author={post.author}
             date={post.date}
+            buttons={[{ label: "Ver más" }]}
           />
         ))}
-      </div>
 
-      <Title type="h2">Product Card</Title>
-
-      <div className="grid">
         {products.slice(0, 2).map((product) => (
-          <ProductCard
+          <Card
             key={product.id}
             image={product.image}
             title={product.title}
-            price={product.price.main}
-            offer={product.price.offer}
-            onSale={product.price.onSale}
+            price={product.price.onSale ? product.price.offer : product.price.main}
+            priceBefore={product.price.onSale ? product.price.main : null}
+            badge={product.price.onSale ? "¡En oferta!" : null}
             description={product.description}
+            buttons={[
+              { label: <FaCartShopping />, href: "https://google.es" },
+              {
+                label: <FaHeart />,
+                href: "https://google.es",
+                color: "secondary",
+              },
+            ]}
           />
         ))}
       </div>

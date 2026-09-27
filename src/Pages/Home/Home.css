@@ -12,6 +12,11 @@
     gap: 8px;
   }
 
+  .grid--cards {
+    row-gap: 40px;
+    column-gap: 24px;
+  }
+
   .typography-showcase {
     display: flex;
     flex-direction: column;
