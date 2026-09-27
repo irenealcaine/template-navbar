@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 
 import App from "./App";
 import { DarkModeContextProvider } from "./Context/darkModeContext";
+import { ThemeColorProvider } from "./Context/themeColorContext";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -10,7 +11,9 @@ const root = createRoot(rootElement);
 root.render(
   <StrictMode>
     <DarkModeContextProvider>
-      <App />
+      <ThemeColorProvider>
+        <App />
+      </ThemeColorProvider>
     </DarkModeContextProvider>
   </StrictMode>
 );

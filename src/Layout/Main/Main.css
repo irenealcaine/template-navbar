@@ -7,7 +7,7 @@
 
   /* navbar */
   position: relative;
-  padding: 70px 0;
+  padding: calc(var(--header-height) + 55px) 0 calc(var(--header-height) + 20px);
 
   /* sidebar */
   /* display: flex; */
@@ -30,6 +30,8 @@
 
 @media screen and (max-width: 768px) {
   .main {
+    padding-top: calc(var(--header-height) + 110px);
+
     .content {
       width: 90%;
 
