@@ -1,8 +1,8 @@
 .progress-bar {
   --thickness: 4px;
   --percent: 0;
-  --completed: var(--green);
-  --non-completed: var(--light);
+  --completed: var(--main);
+  --non-completed: var(--dark-main);
 
   position: relative;
   margin: 16px 0;

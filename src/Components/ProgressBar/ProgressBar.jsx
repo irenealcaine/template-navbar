@@ -2,8 +2,11 @@ import "./ProgressBar.css";
 import { DarkModeContext } from "../../Context/darkModeContext";
 import { useContext } from "react";
 
-const ProgressBar = ({ number, completed, nonCompleted }) => {
+const ProgressBar = ({ number, color }) => {
   const { darkMode } = useContext(DarkModeContext);
+
+  const completed = color ? `var(--${color})` : "var(--main)";
+  const nonCompleted = color ? `var(--dark-${color})` : "var(--dark-main)";
 
   return (
     <p
