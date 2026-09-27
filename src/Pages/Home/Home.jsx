@@ -13,6 +13,8 @@ import { products } from "../../Data/Products";
 import "./Home.css";
 import List from "../../Components/List/List";
 import Modal from "../../Components/Model/Modal";
+import Paragraph from "../../Components/Paragraph/Paragraph";
+import Title from "../../Components/Title/Title";
 import { useToast } from "../../Components/Toast/ToastContext";
 import { useState } from "react"; //modal y toast
 import Table from "../../Components/Table/Table";
@@ -28,22 +30,72 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1>Home</h1>
-      <h2>Subtitle</h2>
-      <p>
+      <Title type="h1">Home</Title>
+      <Title type="h2">Subtitle</Title>
+      <Paragraph>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
         placeat a explicabo?
-      </p>
+      </Paragraph>
 
-      <h3>Paragraph</h3>
-      <p>
+      <Title type="h3">Paragraph</Title>
+      <Paragraph>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
         placeat a explicabo? Molestiae error, minus libero dolorem eveniet
         mollitia accusantium voluptate voluptates ipsa pariatur itaque ratione
         numquam ea, quo quibusdam. Voluptatibus velit tempora sed veritatis
         porro numquam repellat cum delectus. Aliquid doloremque aperiam rem
         accusamus ut, veniam velit, amet dolore, at libero voluptatem iure?
-      </p>
+      </Paragraph>
+
+      <Hr />
+
+      <h2>Typography</h2>
+
+      <h3>Títulos</h3>
+      <div className="grid typography-grid">
+        <div className="typography-example">
+          <Title type="h1" font="playfair-display">
+            Playfair Display
+          </Title>
+        </div>
+        <div className="typography-example">
+          <Title type="h2" font="montserrat">
+            Montserrat
+          </Title>
+        </div>
+        <div className="typography-example">
+          <Title type="h3" font="raleway">
+            Raleway
+          </Title>
+        </div>
+        <div className="typography-example">
+          <Title type="h4" font="merriweather">
+            Merriweather
+          </Title>
+        </div>
+        <div className="typography-example">
+          <Title type="h4">Mulish (default)</Title>
+        </div>
+      </div>
+
+      <h3>Párrafos</h3>
+      <div className="grid typography-grid">
+        <div className="typography-example">
+          <Paragraph>Poppins (default)</Paragraph>
+        </div>
+        <div className="typography-example">
+          <Paragraph font="roboto">Roboto</Paragraph>
+        </div>
+        <div className="typography-example">
+          <Paragraph font="lato">Lato</Paragraph>
+        </div>
+        <div className="typography-example">
+          <Paragraph font="open-sans">Open Sans</Paragraph>
+        </div>
+        <div className="typography-example">
+          <Paragraph font="montserrat">Montserrat</Paragraph>
+        </div>
+      </div>
 
       <Hr />
 

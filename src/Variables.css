@@ -50,6 +50,10 @@
   --main-transparent: var(--blue-transparent);
   --dark-main-transparent: var(--dark-green-transparent);
 
+  /* typography */
+  --font-paragraph: "Poppins", sans-serif;
+  --font-title: "Mulish", sans-serif;
+
   --header-height: 50px;
 
   --header-width: 200px;
