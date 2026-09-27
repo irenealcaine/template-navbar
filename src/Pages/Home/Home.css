@@ -12,9 +12,38 @@
     gap: 8px;
   }
 
-  .typography-grid {
-    gap: 12px;
-    margin: 10px 0;
+  .typography-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px 0 20px;
   }
 
+  .typography-sample {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--main-transparent);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+    }
+  }
+
+  .typography-sample__label {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--dark-main);
+    margin-bottom: 6px;
+  }
 }

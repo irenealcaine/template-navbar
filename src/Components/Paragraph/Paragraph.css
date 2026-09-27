@@ -1,0 +1,11 @@
+@import url("../../Variables.css");
+
+p{
+  margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 14px;
+  }
+}

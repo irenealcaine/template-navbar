@@ -31,75 +31,30 @@ const Home = () => {
   return (
     <div className="home">
       <Title type="h1">Home</Title>
-      <Title type="h2">Subtitle</Title>
+      <Title type="h2" font="raleway">
+        Subtitle
+      </Title>
       <Paragraph>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
         placeat a explicabo?
       </Paragraph>
 
-      <Title type="h3">Paragraph</Title>
-      <Paragraph>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos
-        placeat a explicabo? Molestiae error, minus libero dolorem eveniet
-        mollitia accusantium voluptate voluptates ipsa pariatur itaque ratione
-        numquam ea, quo quibusdam. Voluptatibus velit tempora sed veritatis
-        porro numquam repellat cum delectus. Aliquid doloremque aperiam rem
-        accusamus ut, veniam velit, amet dolore, at libero voluptatem iure?
+      <Title type="h3" font="open-sans">
+        Paragraph
+      </Title>
+      <Paragraph font="roboto">
+        Lorem ipsum dolor sit amet consectetur, adipiscing elit mauris tristique eget per, nullam magnis id facilisi. Nullam in laoreet bibendum consequat justo iaculis non nibh, tempor parturient massa enim scelerisque sapien senectus suspendisse, vel vehicula hendrerit convallis rutrum quam mus.
+      </Paragraph>
+      <Paragraph font="lato">
+        Lorem ipsum dolor sit amet consectetur, adipiscing elit mauris tristique eget per, nullam magnis id facilisi. Nullam in laoreet bibendum consequat justo iaculis non nibh, tempor parturient massa enim scelerisque sapien senectus suspendisse, vel vehicula hendrerit convallis rutrum quam mus.
+      </Paragraph>
+      <Paragraph font="merriweather">
+        Lorem ipsum dolor sit amet consectetur, adipiscing elit mauris tristique eget per, nullam magnis id facilisi. Nullam in laoreet bibendum consequat justo iaculis non nibh, tempor parturient massa enim scelerisque sapien senectus suspendisse, vel vehicula hendrerit convallis rutrum quam mus.
       </Paragraph>
 
       <Hr />
 
-      <h2>Typography</h2>
-
-      <h3>Títulos</h3>
-      <div className="grid typography-grid">
-        <div className="typography-example">
-          <Title type="h1" font="playfair-display">
-            Playfair Display
-          </Title>
-        </div>
-        <div className="typography-example">
-          <Title type="h2" font="montserrat">
-            Montserrat
-          </Title>
-        </div>
-        <div className="typography-example">
-          <Title type="h3" font="raleway">
-            Raleway
-          </Title>
-        </div>
-        <div className="typography-example">
-          <Title type="h4" font="merriweather">
-            Merriweather
-          </Title>
-        </div>
-        <div className="typography-example">
-          <Title type="h4">Mulish (default)</Title>
-        </div>
-      </div>
-
-      <h3>Párrafos</h3>
-      <div className="grid typography-grid">
-        <div className="typography-example">
-          <Paragraph>Poppins (default)</Paragraph>
-        </div>
-        <div className="typography-example">
-          <Paragraph font="roboto">Roboto</Paragraph>
-        </div>
-        <div className="typography-example">
-          <Paragraph font="lato">Lato</Paragraph>
-        </div>
-        <div className="typography-example">
-          <Paragraph font="open-sans">Open Sans</Paragraph>
-        </div>
-        <div className="typography-example">
-          <Paragraph font="montserrat">Montserrat</Paragraph>
-        </div>
-      </div>
-
-      <Hr />
-
-      <h2>Lists</h2>
+      <Title type="h2">Lists</Title>
       <div className="grid">
         <List ordered>
           <li>Element 1</li>
@@ -118,7 +73,7 @@ const Home = () => {
 
       <Hr />
 
-      <h2>Table</h2>
+      <Title type="h2">Table</Title>
       <Table>
         <tr>
           <th>Product</th>
@@ -140,7 +95,7 @@ const Home = () => {
 
       <Hr />
 
-      <h2>Accordion</h2>
+      <Title type="h2">Accordion</Title>
 
       <Accordion title="Sección 1">
         <p>Contenido de la sección 1.</p>
@@ -152,7 +107,7 @@ const Home = () => {
 
       <Hr />
 
-      <h2>Buttons</h2>
+      <Title type="h2">Buttons</Title>
       <div className="grid">
         <Button value={"Main colors"} href={"https://google.es"} />
         <Button
@@ -180,7 +135,7 @@ const Home = () => {
 
       <Hr />
 
-      <h2>Inputs</h2>
+      <Title type="h2">Inputs</Title>
 
       <Input type={"text"} placeholder={"Text"} />
       <div style={{ marginBottom: 8 + "px" }}></div>
@@ -210,7 +165,7 @@ const Home = () => {
 
       <Hr />
 
-      <h2>Loaders</h2>
+      <Title type="h2">Loaders</Title>
 
       <div className="grid">
         <Loader />
@@ -226,7 +181,7 @@ const Home = () => {
 
       <Hr />
 
-      <h2>Tags</h2>
+      <Title type="h2">Tags</Title>
       <div className="grid">
         <Tag tag={"Main colors"} />
         <Tag tag={"Blue"} color={"blue"} />
@@ -254,7 +209,7 @@ const Home = () => {
       </div>
 
       <Hr />
-      <h2>Progress Bars</h2>
+      <Title type="h2">Progress Bars</Title>
       <div className="grid">
         <RadialProgress number={10} size={30} />
         <RadialProgress number={20} size={35} color={"blue"} />
@@ -286,7 +241,7 @@ const Home = () => {
 
       <Hr />
 
-      <h2>Pagination</h2>
+      <Title type="h2">Pagination</Title>
       <Pagination
         currentPage={currentPage}
         totalPages={12}
@@ -295,7 +250,7 @@ const Home = () => {
 
       <Hr />
 
-      <h2>Interactions</h2>
+      <Title type="h2">Interactions</Title>
       <div className="grid">
         <Button value={"Modal"} onClick={() => setIsOpen(true)} />
         <Modal
@@ -325,7 +280,7 @@ const Home = () => {
       </div>
       <Hr />
 
-      <h2>Blog Card</h2>
+      <Title type="h2">Blog Card</Title>
 
       <div className="grid">
         {posts.slice(0, 2).map((post) => (
@@ -341,7 +296,7 @@ const Home = () => {
         ))}
       </div>
 
-      <h2>Product Card</h2>
+      <Title type="h2">Product Card</Title>
 
       <div className="grid">
         {products.slice(0, 2).map((product) => (

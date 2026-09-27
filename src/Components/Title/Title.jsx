@@ -1,4 +1,5 @@
 import { FONTS } from "../../Utils/fonts";
+import "./Title.css";
 
 const TITLES = {
   h1: "h1",
