@@ -7,11 +7,8 @@
 
   /* navbar */
   position: relative;
-  padding: calc(
-      var(--theme-switcher-height) + var(--header-top) + var(--header-height) +
-        55px
-    )
-    0 calc(var(--header-height) + 20px);
+  padding: calc(var(--header-top) + var(--header-height) + 55px) 0
+    calc(var(--header-height) + 20px);
 
   /* sidebar */
   /* display: flex; */
@@ -34,10 +31,7 @@
 
 @media screen and (max-width: 768px) {
   .main {
-    padding-top: calc(
-      var(--theme-switcher-height-mobile) + var(--header-top) +
-        var(--header-height) + 30px
-    );
+    padding-top: calc(var(--header-top) + var(--header-height) + 30px);
 
     .content {
       width: 90%;

@@ -1,22 +1,25 @@
 @import url("../../Variables.css");
 
 .theme-switcher {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  padding: 6px 10px;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-bottom: 16px;
+  padding: 8px 14px;
   background-color: var(--light);
-  border-bottom: 2px solid var(--dark-main);
+  border: 2px solid var(--dark-main);
+  border-radius: var(--border-radius-large);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   z-index: 9;
   transition: var(--transition);
 
   &.dark {
     background-color: var(--dark);
-    border-bottom: 2px solid var(--main);
+    border: 2px solid var(--main);
   }
 
   .theme-switcher__group {
@@ -62,15 +65,5 @@
         outline: 2px solid var(--light);
       }
     }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .theme-switcher {
-    justify-content: flex-start;
-    overflow-x: auto;
-    flex-direction: column;
-    gap: 6px;
-    align-items: flex-start;
   }
 }

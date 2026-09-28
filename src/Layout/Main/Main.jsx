@@ -11,8 +11,10 @@ const Main = ({ children }) => {
   return (
     <div className={`main ${darkMode ? "dark" : ""}`}>
       <Header />
-      <ThemeSwitcher />
-      <div className="content">{children}</div>
+      <div className="content">
+        <ThemeSwitcher />
+        {children}
+      </div>
       <Footer /> {/* solo con navbar */}
     </div>
   );

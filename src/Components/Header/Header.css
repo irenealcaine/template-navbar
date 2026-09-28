@@ -2,7 +2,7 @@
 
 .header {
   position: fixed;
-  top: calc(var(--theme-switcher-height) + var(--header-top));
+  top: var(--header-top);
   left: 50%;
   transform: translateX(-50%);
 
@@ -95,7 +95,7 @@
 
 @media screen and (max-width: 768px) {
   .header {
-    top: calc(var(--theme-switcher-height-mobile) + var(--header-top));
+    top: var(--header-top);
 
     .navigation {
       display: none;
