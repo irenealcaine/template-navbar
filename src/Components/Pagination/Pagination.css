@@ -2,13 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 0px;
 
   .pagination-pages {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 8px;
+    gap: 0px;
   }
 
   .pagination-control,
@@ -80,6 +80,29 @@
 
 @media (max-width: 600px) {
   .pagination {
+    gap:0px;
     justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .pagination-pages {
+    gap: 0px;
+    flex-wrap: nowrap;
+  }
+
+  .pagination-control,
+  .pagination-page {
+    min-width: 32px;
+    height: 32px;
+    padding: 0 6px;
+    font-size: 0.9em;
+  }
+
+  .pagination-page.active {
+    font-size: 1.1em;
+  }
+
+  .pagination-ellipsis {
+    min-width: 16px;
   }
 }
