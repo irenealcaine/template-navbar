@@ -22,21 +22,21 @@ const Page2 = () => {
 
   return (
     <div className="page2">
-      <Title type="h1">Catálogo de datos</Title>
+      <Title type="h1">Data catalog</Title>
       <Paragraph>
-        Tablas, tarjetas y paginación con los datos de productos.
+        Tables, cards and pagination using product data.
       </Paragraph>
 
       <Hr />
 
-      <Title type="h2">Tabla de productos</Title>
+      <Title type="h2">Products table</Title>
       <Table>
         <tr>
-          <th>Producto</th>
-          <th>Categoría</th>
-          <th>Precio</th>
+          <th>Product</th>
+          <th>Category</th>
+          <th>Price</th>
           <th>Stock</th>
-          <th>Valoración</th>
+          <th>Rating</th>
         </tr>
         {products.map((product) => (
           <tr key={product.id}>
@@ -49,7 +49,7 @@ const Page2 = () => {
               {product.stock > 0 ? (
                 product.stock
               ) : (
-                <Tag tag="Agotado" color="red" />
+                <Tag tag="Out of stock" color="red" />
               )}
             </td>
             <td>
@@ -61,10 +61,9 @@ const Page2 = () => {
 
       <Hr />
 
-      <Title type="h2">Paginación</Title>
+      <Title type="h2">Pagination</Title>
       <Paragraph>
-        Mostrando {PAGE_SIZE} productos por página ({totalPages} páginas en
-        total).
+        Showing {PAGE_SIZE} products per page ({totalPages} pages in total).
       </Paragraph>
       <div className="grid--cards">
         {pageProducts.map((product) => (
@@ -74,7 +73,7 @@ const Page2 = () => {
             title={product.title}
             price={product.price.onSale ? product.price.offer : product.price.main}
             priceBefore={product.price.onSale ? product.price.main : null}
-            badge={product.price.onSale ? "¡En oferta!" : null}
+            badge={product.price.onSale ? "On sale!" : null}
             description={product.description}
           />
         ))}
@@ -87,14 +86,14 @@ const Page2 = () => {
 
       <Hr />
 
-      <Title type="h2">Categorías</Title>
+      <Title type="h2">Categories</Title>
       <div className="flex">
         {[...new Set(products.map((p) => p.category))].map((category) => (
           <Tag key={category} tag={category} />
         ))}
       </div>
 
-      <Title type="h3">Ranking por valoración</Title>
+      <Title type="h3">Top rated</Title>
       <List ordered>
         {[...products]
           .sort((a, b) => b.rating.rate - a.rating.rate)

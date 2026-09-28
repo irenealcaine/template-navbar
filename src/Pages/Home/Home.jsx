@@ -23,6 +23,7 @@ import { useState } from "react"; //modal y toast
 import Table from "../../Components/Table/Table";
 import Accordion from "../../Components/Accordion/Accordion";
 import Pagination from "../../Components/Pagination/Pagination";
+import ThemeSwitcher from "../../Components/ThemeSwitcher/ThemeSwitcher";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false); //modal
@@ -33,6 +34,7 @@ const Home = () => {
 
   return (
     <div className="home">
+      <ThemeSwitcher />
       <Title type="h1">Home</Title>
       <Title type="h2" font="raleway">
         Subtitle

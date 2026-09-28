@@ -18,9 +18,9 @@ const Page3 = () => {
 
   return (
     <div className="page3">
-      <Title type="h1">Feedback y estado</Title>
+      <Title type="h1">Feedback and status</Title>
       <Paragraph>
-        Loaders, barras de progreso, modales, toasts y estados combinados.
+        Loaders, progress bars, modals, toasts and combined states.
       </Paragraph>
 
       <Hr />
@@ -40,7 +40,7 @@ const Page3 = () => {
 
       <Hr />
 
-      <Title type="h2">Barras de progreso</Title>
+      <Title type="h2">Progress bars</Title>
       <ProgressBar number={25} />
       <div className="spacer" />
       <ProgressBar number={50} color="blue" />
@@ -51,7 +51,7 @@ const Page3 = () => {
 
       <Hr />
 
-      <Title type="h2">Progreso radial</Title>
+      <Title type="h2">Radial progress</Title>
       <div className="flex">
         <RadialProgress number={10} size={60} />
         <RadialProgress number={40} size={70} color="blue" />
@@ -61,24 +61,26 @@ const Page3 = () => {
 
       <Hr />
 
-      <Title type="h2">Modales</Title>
+      <Title type="h2">Modals</Title>
       <div className="flex">
-        <Button value="Abrir modal" onClick={() => setIsOpen(true)} />
+        <Button value="Open modal" onClick={() => setIsOpen(true)} />
       </div>
       <Modal
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
-        title="Confirmar acción"
+        title="Confirm action"
       >
-        <Paragraph>¿Seguro que quieres continuar con esta acción?</Paragraph>
+        <Paragraph>
+          Are you sure you want to continue with this action?
+        </Paragraph>
         <div className="flex">
-          <Button value="Cancelar" onClick={() => setIsOpen(false)} />
+          <Button value="Cancel" onClick={() => setIsOpen(false)} />
           <Button
-            value="Confirmar"
+            value="Confirm"
             color="green"
             onClick={() => {
               setIsOpen(false);
-              toast("Acción confirmada", "success", 3000);
+              toast("Action confirmed", "success", 3000);
             }}
           />
         </div>
@@ -89,51 +91,51 @@ const Page3 = () => {
       <Title type="h2">Toasts</Title>
       <div className="flex">
         <Button
-          value="Éxito"
+          value="Success"
           color="green"
-          onClick={() => toast("Operación completada", "success", 3000)}
+          onClick={() => toast("Operation completed", "success", 3000)}
         />
         <Button
           value="Info"
           color="blue"
-          onClick={() => toast("Nueva versión disponible", "info", 4000)}
+          onClick={() => toast("New version available", "info", 4000)}
         />
         <Button
           value="Error"
           color="red"
-          onClick={() => toast("Algo salió mal", "error", 3000)}
+          onClick={() => toast("Something went wrong", "error", 3000)}
         />
       </div>
 
       <Hr />
 
-      <Title type="h2">Estados combinados</Title>
+      <Title type="h2">Combined states</Title>
       <Tabs
         tabs={[
           {
-            label: "Cargando",
+            label: "Loading",
             content: (
               <div className="flex">
                 <Loader color="blue" />
-                <Paragraph>Obteniendo datos…</Paragraph>
+                <Paragraph>Fetching data…</Paragraph>
               </div>
             ),
           },
           {
-            label: "Progreso",
+            label: "Progress",
             content: (
               <div>
                 <ProgressBar number={60} color="purple" />
-                <Paragraph>Descargando archivo…</Paragraph>
+                <Paragraph>Downloading file…</Paragraph>
               </div>
             ),
           },
           {
-            label: "Completado",
+            label: "Completed",
             content: (
               <div className="flex">
-                <Tag tag="Listo" color="green" />
-                <Paragraph>Proceso finalizado correctamente.</Paragraph>
+                <Tag tag="Done" color="green" />
+                <Paragraph>Process completed successfully.</Paragraph>
               </div>
             ),
           },

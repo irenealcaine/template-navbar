@@ -13,60 +13,59 @@ import { posts } from "../../Data/BlogPosts";
 const Page4 = () => {
   return (
     <div className="page4">
-      <Title type="h1">Contenido y documentación</Title>
+      <Title type="h1">Content and documentation</Title>
       <Paragraph>
-        Acordeones, tabs, tarjetas de blog y bloques de código.
+        Accordions, tabs, blog cards and code blocks.
       </Paragraph>
 
       <Hr />
 
-      <Title type="h2">Preguntas frecuentes</Title>
-      <Accordion title="¿Cómo instalo el proyecto?">
+      <Title type="h2">FAQ</Title>
+      <Accordion title="How do I install the project?">
         <Paragraph>
-          Ejecuta el instalador de dependencias y después levanta el entorno de
-          desarrollo:
+          Run the dependency installer and then start the development server:
         </Paragraph>
         <div className="flex">
           <Tag tag="npm install" transparent />
           <Tag tag="npm run dev" transparent />
         </div>
       </Accordion>
-      <Accordion title="¿Qué stack usa la plantilla?" defaultOpen>
+      <Accordion title="What stack does the template use?" defaultOpen>
         <Paragraph>
-          React, Vite y CSS con variables de tema, modo oscuro y colores
-          dinámicos vía contextos.
+          React, Vite and CSS with theme variables, dark mode and dynamic colors
+          via contexts.
         </Paragraph>
       </Accordion>
-      <Accordion title="¿Cómo añado una nueva página?">
+      <Accordion title="How do I add a new page?">
         <Paragraph>
-          Crea un componente en <Tag tag="src/Pages" transparent />, registra
-          su ruta en App.jsx y añade el item de navegación en Constants.jsx.
+          Create a component in <Tag tag="src/Pages" transparent />, register
+          its route in App.jsx and add the navigation item in Constants.jsx.
         </Paragraph>
       </Accordion>
 
       <Hr />
 
-      <Title type="h2">Tabs de contenido</Title>
+      <Title type="h2">Content tabs</Title>
       <Tabs
         tabs={[
           {
-            label: "Guía",
+            label: "Guide",
             content: (
               <div>
                 <Paragraph>
-                  La plantilla incluye componentes reutilizables con tema claro
-                  y oscuro.
+                  The template includes reusable components with light and dark
+                  themes.
                 </Paragraph>
                 <List>
-                  <li>Componentes de interfaz</li>
-                  <li>Contexto de tema y colores</li>
-                  <li>Paginación y tablas</li>
+                  <li>UI components</li>
+                  <li>Theme and color context</li>
+                  <li>Pagination and tables</li>
                 </List>
               </div>
             ),
           },
           {
-            label: "Tecnologías",
+            label: "Technologies",
             content: (
               <div className="flex">
                 <Tag tag="React" />
@@ -80,7 +79,7 @@ const Page4 = () => {
 
       <Hr />
 
-      <Title type="h2">Artículos destacados</Title>
+      <Title type="h2">Featured articles</Title>
       <div className="grid--cards">
         {posts.slice(0, 2).map((post) => (
           <Card
@@ -91,17 +90,17 @@ const Page4 = () => {
             description={post.content}
             author={post.author}
             date={post.date}
-            buttons={[{ label: "Leer más" }]}
+            buttons={[{ label: "Read more" }]}
           />
         ))}
       </div>
 
       <Hr />
 
-      <Title type="h2">Bloques de código</Title>
+      <Title type="h2">Code blocks</Title>
       <CodeBlock
         language="jsx"
-        code={`const Componente = ({ title }) => (
+        code={`const Component = ({ title }) => (
   <h2>{title}</h2>
 );`}
       />
