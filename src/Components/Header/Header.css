@@ -96,6 +96,12 @@
 @media screen and (max-width: 768px) {
   .header {
     top: var(--header-top);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: calc(100% - 24px);
+    border-radius: var(--border-radius-full);
+    padding: 0 12px 0 8px;
 
     .navigation {
       display: none;
@@ -107,18 +113,17 @@
         padding: 12px;
         position: absolute;
         top: calc(100% + 8px);
+        left: 0;
         right: 0;
+        width: 100%;
         text-align: center;
         z-index: 10;
-        background: var(--main-transparent);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
+        background: var(--light);
         border: 2px solid var(--dark-main);
         border-radius: var(--border-radius-large);
-        min-width: 160px;
 
         &.dark {
-          background: var(--dark-main-transparent);
+          background: var(--dark);
           border: 2px solid var(--main);
         }
       }
