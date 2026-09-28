@@ -48,6 +48,7 @@
 
   .navigation {
     display: flex;
+    flex-wrap: nowrap;
     gap: 6px;
 
     .navigation-item {
@@ -55,6 +56,8 @@
       border-radius: var(--border-radius-full);
       color: var(--dark-main);
       font-weight: 500;
+      white-space: nowrap;
+      flex-shrink: 0;
       transition: var(--transition);
 
       &:hover {
