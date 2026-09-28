@@ -6,7 +6,9 @@ const Table = ({ children }) => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
-    <table className={`table ${darkMode ? "dark" : ""}`}>{children}</table>
+    <div className="table-wrapper">
+      <table className={`table ${darkMode ? "dark" : ""}`}>{children}</table>
+    </div>
   );
 };
 
